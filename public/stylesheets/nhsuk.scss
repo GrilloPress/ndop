@@ -61,3 +61,12 @@
 @import "components/step-list";
 @import "components/tabs";
 @import "components/error";
+
+// NDOP Overrides
+
+.local-header__subtitle {
+
+  color: white;
+  margin-top: 5px;
+  
+}

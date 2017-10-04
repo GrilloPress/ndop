@@ -17,7 +17,6 @@ router.get('/F', function(req, res, next) {
 });
 
 // GET all v1 URL reqs and push them to a template in the v1 file
-// This doesn't handle sub-urls yet...
 // This feels really brittle and hacky...
 // No handling of no view found...
 router.get('/F/:view', function(req, res, next) {
@@ -25,6 +24,11 @@ router.get('/F/:view', function(req, res, next) {
   res.render( 'F/' + theView );
 });
 
+router.get('/F/:subdir/:view', function(req, res, next) {
+  var theView = req.params.view;
+  var theDir = req.params.subdir;
+  res.render( 'F/' + theDir + '/' + theView );
+});
 // // // // // // //
 
 module.exports = router;

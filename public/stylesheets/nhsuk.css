@@ -2462,4 +2462,8 @@ input::-webkit-inner-spin-button {
 .error {
   border-color: #da291c; }
 
+.local-header__subtitle {
+  color: white;
+  margin-top: 5px; }
+
 /*# sourceMappingURL=nhsuk.css.map */
