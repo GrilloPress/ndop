@@ -1,4 +1,4 @@
-{% set title = 'National Data Out-out Service Prototype' %}
+{% set title = 'National Data Out-out Service' %}
 {% block scripts %}
 
 {% endblock %}
@@ -9,9 +9,22 @@
   <div class="page-section">
     <div class="local-header">
       <h1 class="local-header__title">{{title}}</h1>
+      <div class="local-header__intro">
+        <p>Prototype homepage for the {{title}}.</p>
+        <p>A service to register your preferences for sharing patient health information</p>
+      </div>
     </div>
-    <p><a href="./F">Start the Prototype</a></p>
-    <button href="./F"></button>
+    <p><a role="button" class="button" href="./F">Start Prototype F</a></p>
+    <h2>Latest Stable</h2>
+    <p>
+      <a title="Prototype D - {{title}}" href="http://ndop.herokuapp.com/app/prototypes/prototype-d/index.html">Prototype D</a>
+    </p>
+    <h2>Recent Prototypes</h2>
+    <ul class="link-list">
+      <li><a title="Prototype F - {{title}}" href="./F">Prototype F</a></li>
+      <li><a title="Prototype E - {{title}}" href="http://ndop.herokuapp.com/app/prototypes/lab-5-changes/index.html">Prototype E</a></li>
+      <li><a title="Previous prototypes" href="http://ndop.herokuapp.com/index.html">Previous prototypes</a></li>
+    </ul>
   </div>
 </main>
 {% endblock %}
