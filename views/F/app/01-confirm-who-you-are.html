@@ -1,0 +1,72 @@
+{% block scripts %}
+<script src="/javascripts/radio-checkbox.js"></script>
+<script src="/javascripts/confirm-who-you-are.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+    <div class="local-header">
+      <h1 class="local-header__title">Confirm who you are</h1>
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+
+              <div class="reading-width">
+                <p>For security reasons we must check who you are. We will do this by sending you a text message or email with a unique security code. Don’t worry, you do not have to give us your contact details here. </p>
+
+                <p>If you have registered your mobile or email with your GP practice, we will be able to find the details by matching your name, postcode, date of birth and NHS number.</p>
+
+                <p>To continue you will need:</p>
+
+                <ul>
+                  <li>Access to your email or mobile phone</li>
+                  <li>Your NHS number</li>
+                </ul>
+
+                <details class="" role="group">
+                  <summary role="button">
+                    <span class="details__summary">Where can I find my NHS number?</span>
+                  </summary>
+                  <div class="details__content">
+                    <div class="reading-width">
+                      <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+                      <ul>
+                        <li>Prescriptions</li>
+                        <li>Test results</li>
+                        <li>Hospital referral letters</li>
+                        <li>Appointment letters</li>
+                        <li>Your NHS medical card</li>
+                      </ul>
+                      <p>Ask your GP for help if you can't find your NHS number</p>
+                    </div>
+                  </div>
+                </details>
+
+                <form id="form" action="your-details.html">
+                  <fieldset>
+                    <h3>You must agree to the following statement by ticking the box</h3>
+                    <div class="callout callout--attention" >
+                      <label for="pds-confirm" class="form-label form-label--checkbox multiple-choice--checkbox">
+                      <input type="checkbox" id="pds-confirm" class="multiple-choice--checkbox">
+                      I allow the NHS to use my email address or mobile phone number to check who I am
+                    </label>
+                    </div>
+                    <input class="button" type="submit" value="Continue">
+                  </fieldset>
+                </form>
+
+              </div>
+              
+            </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}
