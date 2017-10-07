@@ -2585,7 +2585,7 @@ input::-webkit-inner-spin-button {
 
 .list--breadcrumb {
   padding-left: 0;
-  margin-bottom: 32px; }
+  font-size: 18px; }
   .list--breadcrumb li {
     list-style: none;
     padding-left: 0;

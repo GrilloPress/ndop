@@ -1,0 +1,43 @@
+{% block scripts %}
+<script src="/javascripts/radio-checkbox.js"></script>
+<script src="/javascripts/confirm-who-you-are.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+    <ul class="list--breadcrumb">
+      <li><a href="#">NHS.UK</a></li>
+      <li><a href="/F/01-overview">Your patient health information</a></li>
+      <li><a href="/f/app/index">Register your preference</a></li>
+      <li>Your details</li>
+    </ul>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Your details</h1>
+      <div class="local-header__intro">
+          <div class="reading-width">
+            <p>Step 1 of 5</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+
+              <div class="reading-width">
+
+              </div>
+              
+            </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}
