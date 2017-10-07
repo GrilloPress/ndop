@@ -77,23 +77,45 @@
 
 // inline list 
 
-.list--inline li {
+.list--inline {
 
-  list-style: none;
   padding-left: 0; 
-  display: inline;
+  
+  li {
+
+    list-style: none;
+    display: inline;
+
+    }
+  }
+
+  .list--unstyled {
+
+    padding-left: 0; 
+
+    li {
+
+      list-style: none;
+    }
 
   }
 
-  .list--breadcrumb li {
+  .list--breadcrumb {
 
-    list-style: none;
-    padding-left: 0; 
-    display: inline;
-     
-      + li:before {
-       content: ">";
-       padding: 0 5px;
-       color: $black;
-     }
+    padding-left: 0;
+    font-size:    18px;
+  
+    li {
+
+      list-style: none;
+      padding-left: 0; 
+      display: inline;
+      
+      // Ignores first li and makes the second li and on have a > before it
+        + li:before {
+        content: ">";
+        padding: 0 5px;
+        color: $black;
+      }
+    }
   }
