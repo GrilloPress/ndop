@@ -2572,4 +2572,18 @@ input::-webkit-inner-spin-button {
   color: white;
   margin-top: 5px; }
 
+.list--inline li {
+  list-style: none;
+  padding-left: 0;
+  display: inline; }
+
+.list--breadcrumb li {
+  list-style: none;
+  padding-left: 0;
+  display: inline; }
+  .list--breadcrumb li + li:before {
+    content: ">";
+    padding: 0 5px;
+    color: #231f20; }
+
 /*# sourceMappingURL=nhsuk.css.map */
