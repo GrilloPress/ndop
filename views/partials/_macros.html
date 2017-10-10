@@ -1,3 +1,5 @@
+{# macro to create next/previous page links 
+#}
 {% macro page_nav(prevTitle, prevLink, nextTitle, nextLink) %}
 <nav role="navigation" aria-label="Guide pagination">
   <ul class="article-pagination">
@@ -23,32 +25,42 @@
 </nav>
 {% endmacro %}
 
+{# macro to create radio buttons 
 
+  Example
 
-
-
-
+  {{ patterns.nhsRadios('yes-or-no',
+                        'yes-or-no',
+                        'Please select an option',
+                         'This is a hint',
+                        'yes',
+                        '',
+                        [ {id: 'yes', value: 'yes', label: 'Yes'},
+                          {id: 'no', value: 'no', label: 'No'} ]
+                        ) }}
+   
+#}
 {% macro nhsRadios(name, id, legend, hint, value, error, radioButtons, classes) %}
-{% if not id %}
-    {% set id="input-" + name %}
-{% endif %}
+  {% if not id %}
+      {% set id="input-" + name %}
+  {% endif %}
 
-<div class="form-group {% if error %} error {% endif %}" id="{{id}}-form">
-    <fieldset{% if radioButtons.length < 3 %} class="inline"{% endif %}>
-       <legend>
-            <span class="form-label{% if classes.legend %} {{ classes.legend }}{% endif %}">{{legend}}</span>
-            {% if error %}<span class="error-message">{{error}}</span> {% endif %}
-            {% if hint %}<span class="form-hint">{{hint}}</span>{% endif %}
+  <div class="form-group {% if error %} error {% endif %}" id="{{id}}-form">
+      <fieldset>
+        <legend>
+          <span class="form-label{% if classes.legend %} {{ classes.legend }}{% endif %}">{{legend}}</span>
+          {% if error %}<span class="error-message">{{error}}</span> {% endif %}
+          {% if hint %}<span class="form-label__hint">{{hint}}</span>{% endif %}
         </legend>
-        
-        {% for radio in radioButtons %}
-            <label class="form-label form-label--radio multiple-choice--radio" for="{{id}}-{{radio.id}}"
-            {% if radio.dataTarget %} data-target="{{radio.dataTarget}}"{% endif %}>
-                <input id="{{id}}-{{radio.id}}" type="radio" name="{{name}}" value="{{radio.value}}" {% if value == radio.value %} checked{% endif %}
-                {% if radio.dataJourneyClick %} data-journey-click="{{radio.dataJourneyClick}}"{% endif %}>
-                {{radio.label}}
-            </label>
-        {% endfor %}
-    </fieldset>
-</div>
+          
+          {% for radio in radioButtons %}
+              <label class="form-label form-label--radio multiple-choice--radio" for="{{id}}-{{radio.id}}"
+              {% if radio.dataTarget %} data-target="{{radio.dataTarget}}"{% endif %}>
+                  <input id="{{id}}-{{radio.id}}" type="radio" name="{{name}}" value="{{radio.value}}" {% if value == radio.value %} checked{% endif %}
+                  {% if radio.dataJourneyClick %} data-journey-click="{{radio.dataJourneyClick}}"{% endif %}>
+                  {{radio.label}}
+              </label>
+          {% endfor %}
+      </fieldset>
+  </div>
 {% endmacro %}
