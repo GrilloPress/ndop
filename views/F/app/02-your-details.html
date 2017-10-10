@@ -34,19 +34,32 @@
               <div class="reading-width">
                 <form action="">
                   {{ patterns.nhsRadios('yes-or-no',
-                        'yes-or-no',
-                        'Please select an option',
-                         ['This is a hint'],
-                        'yes',
-                        '',
-                        [ {id: 'yes', value: 'yes', label: 'Yes'},
-                          {id: 'no', value: 'no', label: 'No'} ],
-                          '',
-                          'info'
-                        ) }}
+                                        'yes-or-no',
+                                        'Please select an option',
+                                        ['This is a hint'],
+                                        'yes',
+                                        '',
+                                        [ {id: 'yes', value: 'yes', label: 'Yes'},
+                                          {id: 'no', value: 'no', label: 'No'} ]
+                                        ) }}
 
-                {{ patterns.nhsInput( "name", "id", "label", ["hint one", "hint two"], "", "error", "", "tests-class", "info" )}}
-            
+                  {{ patterns.nhsInput( "name", 
+                                        "id", 
+                                        "label", 
+                                        ["hint one", "hint two"], 
+                                        "", 
+                                        "error", 
+                                        "6", 
+                                        "tests-class", 
+                                        "info" )}}
+
+                    {{ patterns.nhsDateInput('dob',
+                                             'dob', 
+                                             'Date of birth',
+                                             ['hint'],
+                                             {day: 01, month: 02, year: 2010}
+                                             )}}
+
                 </form>
                   </div>
             </div>

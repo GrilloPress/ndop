@@ -84,6 +84,18 @@
 
 {# Macro to create an input field
 
+Example
+
+{{ patterns.nhsInput( "name", 
+                      "id", 
+                      "label", 
+                      ["hint one", "hint two"], 
+                      "", 
+                      "error", 
+                      "6", 
+                      "tests-class", 
+                      "info" )}}
+
 #}
 
 {% macro nhsInput(name, id, label, hints, value, error, maxlength, classes, callout) %}
@@ -112,6 +124,82 @@
            type="text"
            value="{{value}}" />
   {% if callout %}
+    </div>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{# Macro to create an date field of Day, Month, Year
+
+
+Example
+
+{{ patterns.nhsDateInput('dob',
+                         'dob', 
+                         'Date of birth',
+                         ['hint'],
+                         {day: 01, month: 02, year: 2010}
+                         )}}
+
+#}
+{% macro nhsDateInput(name, id, legend, hints, value, maxYear, error) %}
+{% if not id %}
+    {% set id="input-" + name %}
+{% endif %}
+<div id="{{id}}-form" class="-date form-group{% if error %} error{% endif %}">
+  {% if callout %}
+  <div class="callout callout--{{callout}}">
+  {% endif %}
+    <fieldset>
+        <div class="form-date">
+            <legend>
+                <span class="form-label-bold">{{ legend }}</span>
+                {% if hints %}
+                  {% for hint in hints %}
+                    <span class="form-label__hint">{{hint}}</span>
+                  {% endfor %}
+                {% endif %}
+                {% if error %}<span class="error-message">{{ error }}</span>{% endif %}
+            </legend>
+            
+            <div class="form-group form-group-day">
+                <label for="{{id}}-day">Day</label>
+                <input class="form-control day"
+                        id="{{id}}-day"
+                        name="{{name}}Day"
+                        value="{{value.day}}"
+                        type="number"
+                        pattern="[0-9]*"
+                        min="0"
+                        max="31" />
+            </div>
+            
+            <div class="form-group form-group-month">
+                <label for="{{id}}-month">Month</label>
+                <input class="form-control month"
+                        id="{{id}}-month"
+                        name="{{name}}Month"
+                        value="{{value.month}}"
+                        type="number"
+                        pattern="[0-9]*"
+                        min="0"
+                        max="31" />
+            </div>
+
+            <div class="form-group form-group-year">
+                <label for="{{id}}-year">Year</label>
+                <input class="form-control year"
+                        id="{{id}}-year"
+                        name="{{name}}Year"
+                        value="{{value.year}}"
+                        type="number"
+                        pattern="[0-9]*"
+                        min="0"
+                        {% if maxYear %}max="{{maxYear}}"{% endif %} />
+            </div>
+        </div>
+    </fieldset>
+    {% if callout %}
     </div>
   {% endif %}
 </div>
