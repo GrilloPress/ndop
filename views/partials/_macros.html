@@ -28,20 +28,26 @@
 {# Form elements remixed from https://github.com/htmlandbacon/govuk-elements-nunjucks #}
 {# macro to create radio buttons 
 
+  Structure
+
+  'name', 'id', 'legend', ['hint1', 'hint2'], 'value', 'error', [{ id: 'id-of-your-radio-button', value: 'value', label: 'label'}, { id: 'id-of-your-second-radio-button', value: 'value', label: 'label'}], 'classes', 'callout-style-name-if-needed'
+
   Example
 
   {{ patterns.nhsRadios('yes-or-no',
                         'yes-or-no',
                         'Please select an option',
-                         'This is a hint',
+                         ['This is a hint'],
                         'yes',
                         '',
                         [ {id: 'yes', value: 'yes', label: 'Yes'},
-                          {id: 'no', value: 'no', label: 'No'} ]
+                          {id: 'no', value: 'no', label: 'No'} ],
+                          '',
+                          ''
                         ) }}
    
 #}
-{% macro nhsRadios(name, id, legend, hint, value, error, radioButtons, classes) %}
+{% macro nhsRadios(name, id, legend, hints, value, error, radioButtons, classes, callout) %}
   {% if not id %}
       {% set id="input-" + name %}
   {% endif %}
@@ -50,18 +56,28 @@
       <fieldset>
         <legend>
           <span class="form-label{% if classes.legend %} {{ classes.legend }}{% endif %}">{{legend}}</span>
-          {% if error %}<span class="error-message">{{error}}</span> {% endif %}
-          {% if hint %}<span class="form-label__hint">{{hint}}</span>{% endif %}
+          {% if error %} <span class="error-message">{{error}}</span> {% endif %}
+          {% if hints %}
+          {% for hint in hints %}
+              <span class="form-label__hint">{{hint}}</span>
+            {% endfor %}
+          {% endif %}
         </legend>
           
-          {% for radio in radioButtons %}
-              <label class="form-label form-label--radio multiple-choice--radio" for="{{id}}-{{radio.id}}"
-              {% if radio.dataTarget %} data-target="{{radio.dataTarget}}"{% endif %}>
-                  <input id="{{id}}-{{radio.id}}" type="radio" name="{{name}}" value="{{radio.value}}" {% if value == radio.value %} checked{% endif %}
-                  {% if radio.dataJourneyClick %} data-journey-click="{{radio.dataJourneyClick}}"{% endif %}>
-                  {{radio.label}}
-              </label>
-          {% endfor %}
+          {% if callout %}
+          <div class="callout callout--{{callout}}">
+          {% endif %}
+            {% for radio in radioButtons %}
+                <label class="form-label form-label--radio multiple-choice--radio" for="{{id}}-{{radio.id}}"
+                {% if radio.dataTarget %} data-target="{{radio.dataTarget}}"{% endif %}>
+                    <input id="{{id}}-{{radio.id}}" type="radio" name="{{name}}" value="{{radio.value}}" {% if value == radio.value %} checked{% endif %}
+                    {% if radio.dataJourneyClick %} data-journey-click="{{radio.dataJourneyClick}}"{% endif %}>
+                    {{radio.label}}
+                </label>
+            {% endfor %}
+          {% if callout %}
+          </div>
+          {% endif %}
       </fieldset>
   </div>
 {% endmacro %}
@@ -70,13 +86,16 @@
 
 #}
 
-{% macro nhsInput(name, id, label, hints, value, error, maxlength, classes) %}
+{% macro nhsInput(name, id, label, hints, value, error, maxlength, classes, callout) %}
 
 {% if not id %}
     {% set id="input-" + name %}
 {% endif %}
 
 <div id="{{id}}-form" class="form-group{% if error %} error{% endif %}">
+  {% if callout %}
+    <div class="callout callout--{{callout}}">
+  {% endif %}
     <label for="{{ id }}">
         <span class="form-label {% if classes.label %}{{ classes.label }}{% endif %}">{{ label }}</span>
         {% if hints %}
@@ -92,5 +111,8 @@
            name="{{name}}"
            type="text"
            value="{{value}}" />
+  {% if callout %}
+    </div>
+  {% endif %}
 </div>
 {% endmacro %}

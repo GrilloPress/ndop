@@ -32,8 +32,23 @@
           <div class="grid-row">
             <div class="column--three-quarters">
               <div class="reading-width">
-                {{ patterns.nhsInput( "name", "id", "label", ["hint one", "hint two"], "", "error", "", "tests-class" )}}
-              </div>
+                <form action="">
+                  {{ patterns.nhsRadios('yes-or-no',
+                        'yes-or-no',
+                        'Please select an option',
+                         ['This is a hint'],
+                        'yes',
+                        '',
+                        [ {id: 'yes', value: 'yes', label: 'Yes'},
+                          {id: 'no', value: 'no', label: 'No'} ],
+                          '',
+                          'info'
+                        ) }}
+
+                {{ patterns.nhsInput( "name", "id", "label", ["hint one", "hint two"], "", "error", "", "tests-class", "info" )}}
+            
+                </form>
+                  </div>
             </div>
           </div>
       </div>
