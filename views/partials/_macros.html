@@ -25,6 +25,7 @@
 </nav>
 {% endmacro %}
 
+{# Form elements remixed from https://github.com/htmlandbacon/govuk-elements-nunjucks #}
 {# macro to create radio buttons 
 
   Example
@@ -63,4 +64,33 @@
           {% endfor %}
       </fieldset>
   </div>
+{% endmacro %}
+
+{# Macro to create an input field
+
+#}
+
+{% macro nhsInput(name, id, label, hints, value, error, maxlength, classes) %}
+
+{% if not id %}
+    {% set id="input-" + name %}
+{% endif %}
+
+<div id="{{id}}-form" class="form-group{% if error %} error{% endif %}">
+    <label for="{{ id }}">
+        <span class="form-label {% if classes.label %}{{ classes.label }}{% endif %}">{{ label }}</span>
+        {% if hints %}
+          {% for hint in hints %}
+            <span class="form-label__hint">{{hint}}</span>
+          {% endfor %}
+        {% endif %}
+        {% if error %}<span class="has-error help-block error-message">{{error}}</span> {% endif %}
+    </label>
+    <input class="form-control{% if classes.input %} {{ classes.input }}{% endif %}"
+           id="{{ id }}"
+           {% if maxlength %} maxlength="{{maxlength}}"{% endif %}
+           name="{{name}}"
+           type="text"
+           value="{{value}}" />
+</div>
 {% endmacro %}
