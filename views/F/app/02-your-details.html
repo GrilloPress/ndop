@@ -32,7 +32,18 @@
           <div class="grid-row">
             <div class="column--three-quarters">
               <div class="reading-width">
-
+                <form action="">
+                {{ patterns.nhsRadios('yes-or-no',
+                                      'yes-or-no',
+                                      'Please select an option',
+                                      '',
+                                      'yes',
+                                      '',
+                                      [ {id: 'yes', value: 'yes', label: 'Yes'},
+                                        {id: 'no', value: 'no', label: 'No'} ]
+                                      ) }}
+                </form>
+                
               </div>
             </div>
           </div>
