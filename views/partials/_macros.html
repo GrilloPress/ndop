@@ -69,11 +69,11 @@
           {% endif %}
             {% for radio in radioButtons %}
                 <label class="form-label form-label--radio multiple-choice--radio" for="{{id}}-{{radio.id}}"
-                {% if radio.dataTarget %} data-target="{{radio.dataTarget}}"{% endif %}>
-                    <input id="{{id}}-{{radio.id}}" type="radio" name="{{name}}" value="{{radio.value}}" {% if value == radio.value %} checked{% endif %}
-                    {% if radio.dataJourneyClick %} data-journey-click="{{radio.dataJourneyClick}}"{% endif %}>
-                    {{radio.label}}
+                {% if radio.dataTarget %} data-target="{{radio.dataTarget}}"{% endif %}> {{radio.label}}
                 </label>
+                <input id="{{id}}-{{radio.id}}" type="radio" name="{{name}}" value="{{radio.value}}" {% if value == radio.value %} checked{% endif %}
+                    {% if radio.dataJourneyClick %} data-journey-click="{{radio.dataJourneyClick}}"{% endif %}>
+                    
             {% endfor %}
           {% if callout %}
           </div>
@@ -130,7 +130,6 @@ Example
 {% endmacro %}
 
 {# Macro to create an date field of Day, Month, Year
-
 
 Example
 
@@ -200,6 +199,50 @@ Example
         </div>
     </fieldset>
     {% if callout %}
+    </div>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{# Macro to create a number field
+
+Example
+
+{{ patterns.nhsNumber('dob',
+                         'dob', 
+                         'Date of birth',
+                         ['hint'],
+                         {day: 01, month: 02, year: 2010}
+                         )}}
+
+#}
+
+{% macro nhsNumber(name, id, label, hints, value, error, maxlength, classes, callout) %}
+
+{% if not id %}
+    {% set id="input-" + name %}
+{% endif %}
+
+<div id="{{id}}-form" class="form-group{% if error %} error{% endif %}">
+  {% if callout %}
+    <div class="callout callout--{{callout}}">
+  {% endif %}
+    <label for="{{ id }}">
+        <span class="form-label {% if classes.label %}{{ classes.label }}{% endif %}">{{ label }}</span>
+        {% if hints %}
+          {% for hint in hints %}
+            <span class="form-label__hint">{{hint}}</span>
+          {% endfor %}
+        {% endif %}
+        {% if error %}<span class="has-error help-block error-message">{{error}}</span> {% endif %}
+    </label>
+    <input class="form-control{% if classes.input %} {{ classes.input }}{% endif %}"
+           id="{{ id }}"
+           {% if maxlength %} maxlength="{{maxlength}}"{% endif %}
+           name="{{name}}"
+           type="number"
+           value="{{value}}" />
+  {% if callout %}
     </div>
   {% endif %}
 </div>
