@@ -1970,10 +1970,6 @@ p {
       float: left;
       clear: both; } }
 
-.form-label--checkbox,
-.form-label--radio {
-  padding: 15px 0; }
-
 .form-label--radio {
   font-weight: normal; }
 

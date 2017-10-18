@@ -68,17 +68,14 @@
           <div class="callout callout--{{callout}}">
           {% endif %}
             {% for radio in radioButtons %}
-            <p>
+            <div class="form-row">
               <input id="{{id}}-{{radio.id}}" type="radio" name="{{name}}" value="{{radio.value}}" {% if value == radio.value %} checked{% endif %}
                     {% if radio.dataJourneyClick %} data-journey-click="{{radio.dataJourneyClick}}"{% endif %}>
 
                 <label class="form-label form-label--radio multiple-choice--radio" for="{{id}}-{{radio.id}}"
                 {% if radio.dataTarget %} data-target="{{radio.dataTarget}}"{% endif %}> {{radio.label}}
                 </label>
-            </p>
-            
-                
-                    
+            </div>    
             {% endfor %}
           {% if callout %}
           </div>
