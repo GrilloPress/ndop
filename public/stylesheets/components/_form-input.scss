@@ -34,7 +34,7 @@ input[type='password'] {
 
   &.-small {
     @include media($site-width) {
-      width: 8em;
+      width: 11.5em;
     }
   }
 }
