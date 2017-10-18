@@ -2629,4 +2629,8 @@ input::-webkit-inner-spin-button {
       padding: 0 5px;
       color: #231f20; }
 
+.callout-title--muted {
+  background-color: #d8dde0;
+  padding: 12px; }
+
 /*# sourceMappingURL=nhsuk.css.map */
