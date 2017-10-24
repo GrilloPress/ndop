@@ -721,6 +721,21 @@ h2 {
       font-size: 36px;
       line-height: 48px; } }
 
+.h2 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    .h2 {
+      font-size: 32px;
+      line-height: 48px; } }
+  @media (min-width: 925px) {
+    .h2 {
+      font-size: 36px;
+      line-height: 48px; } }
+
 h3 {
   font-family: "Frutiger W01", Arial, sans-serif;
   font-size: 24px;
@@ -733,6 +748,21 @@ h3 {
       line-height: 32px; } }
   @media (min-width: 925px) {
     h3 {
+      font-size: 24px;
+      line-height: 32px; } }
+
+.h3 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    .h3 {
+      font-size: 24px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    .h3 {
       font-size: 24px;
       line-height: 32px; } }
 
@@ -751,6 +781,21 @@ h4 {
       font-size: 20px;
       line-height: 32px; } }
 
+.h4 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    .h4 {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    .h4 {
+      font-size: 20px;
+      line-height: 32px; } }
+
 h5 {
   font-family: "Frutiger W01", Arial, sans-serif;
   font-size: 16px;
@@ -763,6 +808,21 @@ h5 {
       line-height: 24px; } }
   @media (min-width: 925px) {
     h5 {
+      font-size: 16px;
+      line-height: 24px; } }
+
+.h5 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    .h5 {
+      font-size: 16px;
+      line-height: 24px; } }
+  @media (min-width: 925px) {
+    .h5 {
       font-size: 16px;
       line-height: 24px; } }
 
@@ -1734,6 +1794,21 @@ h2 {
       font-size: 36px;
       line-height: 48px; } }
 
+.h2 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    .h2 {
+      font-size: 32px;
+      line-height: 48px; } }
+  @media (min-width: 925px) {
+    .h2 {
+      font-size: 36px;
+      line-height: 48px; } }
+
 h3 {
   font-family: "Frutiger W01", Arial, sans-serif;
   font-size: 24px;
@@ -1746,6 +1821,21 @@ h3 {
       line-height: 32px; } }
   @media (min-width: 925px) {
     h3 {
+      font-size: 24px;
+      line-height: 32px; } }
+
+.h3 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    .h3 {
+      font-size: 24px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    .h3 {
       font-size: 24px;
       line-height: 32px; } }
 
@@ -1764,6 +1854,21 @@ h4 {
       font-size: 20px;
       line-height: 32px; } }
 
+.h4 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    .h4 {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    .h4 {
+      font-size: 20px;
+      line-height: 32px; } }
+
 h5 {
   font-family: "Frutiger W01", Arial, sans-serif;
   font-size: 16px;
@@ -1776,6 +1881,21 @@ h5 {
       line-height: 24px; } }
   @media (min-width: 925px) {
     h5 {
+      font-size: 16px;
+      line-height: 24px; } }
+
+.h5 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    .h5 {
+      font-size: 16px;
+      line-height: 24px; } }
+  @media (min-width: 925px) {
+    .h5 {
       font-size: 16px;
       line-height: 24px; } }
 
