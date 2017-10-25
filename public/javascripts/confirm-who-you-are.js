@@ -16,7 +16,9 @@
         if (!$('#pds-confirm').is(':checked')) {
           //prevent the default form submit if it is not checked
           e.preventDefault();
-          $('.callout--attention').css("border-color", "#da291c");
+          $('.error-message').addClass("error-message-active");
+          $('.form-row').addClass("form-row-error-active");
+          $('.multiple-choice--checkbox').addClass("checkbox-has-error");
         }
       })
     })
@@ -26,4 +28,3 @@
         $('.callout--attention').css("border-color", "#0072ce");
       }
     });
-  

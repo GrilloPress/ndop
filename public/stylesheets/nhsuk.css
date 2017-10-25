@@ -2435,6 +2435,26 @@ input::-webkit-inner-spin-button {
 .error {
   border-color: #da291c; }
 
+.error-message {
+  display: none; }
+
+.error-message-active {
+  display: block; }
+
+.form-row-error-active {
+  border-left: 5px solid #da291c;
+  padding: 1em; }
+
+.error-text {
+  color: #da291c;
+  font-weight: 600; }
+
+.input-has-error {
+  border: 5px solid #da291c; }
+
+.checkbox-has-error + label::before {
+  border-color: #da291c; }
+
 .local-header__subtitle {
   color: white;
   margin-top: 5px; }
