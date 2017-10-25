@@ -1,13 +1,13 @@
 {% block scripts %}
 <script src="/javascripts/radio-checkbox.js"></script>
-<script src="/javascripts/confirm-who-you-are.js"></script>
+<script src="/javascripts/your-details-validation-proto-4.js"></script>
 {% endblock %}
 {% extends 'layouts/layout.html' %}
 
 {% block body %}
 <main id="content" role="main">
   <div class="page-section">
-    
+
     <nav aria-label="Breadcrumb">
       <ol class="list--breadcrumb">
         <li><a href="/F/">NHS.UK</a></li>
@@ -32,46 +32,88 @@
           <div class="grid-row">
             <div class="column--three-quarters">
               <div class="reading-width">
-                <form action="">
-                  {{ patterns.nhsRadios('yes-or-no',
-                                        'yes-or-no',
-                                        'Please select an option',
-                                        ['This is a hint'],
-                                        'yes',
-                                        '',
-                                        [ {id: 'yes', value: 'yes', label: 'Yes'},
-                                          {id: 'no', value: 'no', label: 'No'} ]
-                                        ) }}
 
-                  {{ patterns.nhsInput( "name", 
-                                        "id", 
-                                        "label", 
-                                        ["hint one", "hint two"], 
-                                        "", 
-                                        "error", 
-                                        "6", 
-                                        "tests-class", 
-                                        "info" )}}
+                <div class="error error-summary callout callout--error error-message" role="alert">
+                  <h2 class="h3 error-text">To use the online service, please indicate you have agreed to the statement below</h2>
+                  <ul class="link-list">
+                    <li>
+                      <a class="error-text" href="#incomplete-checkbox">Incomplete checkbox</a>
+                    </li>
+                  </ul>
+                </div>
 
-                   {{ patterns.nhsNumber( "name", 
-                                          "id", 
-                                          "label", 
-                                          ["hint one", "hint two"], 
-                                          "", 
-                                          "error", 
-                                          "6", 
-                                          "tests-class", 
-                                          "info" )}}
+                <p>You should use the same details you have given your GP.</p>
 
-                    {{ patterns.nhsDateInput('dob',
-                                             'dob', 
-                                             'Date of birth',
-                                             ['hint'],
-                                             {day: 01, month: 02, year: 2010}
-                                             )}}
+                  <form class="measure" method="post" onsubmit="return !!(formValidation() &amp; matchDetails());">
 
-                </form>
-                  </div>
+                    <fieldset>
+                      <div class="grid-row">
+                        <div class="form-group column--one-half" id="first-name">
+                          <label for="first-name" class="form-label">First name</label>
+                          <span class="help-block" id="first-name-error" style="display: none;">Please enter your first name</span>
+                          <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
+                        </div>
+                      </div>
+
+                      <div class="grid-row">
+                        <div class="form-group column--one-half" id="last-name">
+                          <label for="last-name" class="form-label">Last name</label>
+                          <input autocomplete="off" type="text" class="form-control" id="last-name-input" name="last-name" value="">
+                          <span class="help-block" id="last-name-error" style="display: none;">Please enter your last name</span>
+                        </div>
+                      </div>
+
+                      <div class="grid-row">
+                        <div class="-date form-group" id="dob">
+                          <div class="column--three-quarters">
+                            <label class="form-label">Date of Birth</label>
+                            <span class="form-label__hint">For example, '01 04 1980'</span>
+                            <div class="has-error">
+                              <span class="help-block" id="dob-error" style="display: none;">Please enter your date of birth</span>
+                            </div>
+                          </div>
+                          <div class="column--one-half">
+                            <div>
+                              <label for="dob-day-input">Day</label>
+                              <input autocomplete="off" type="number" id="dob-day-input" name="dob-day" value="" class="day form-control" maxlength="2">
+                            </div>
+                            <div>
+                              <label for="dob-month-input">Month</label>
+                              <input autocomplete="off" type="number" id="dob-month-input" name="dob-month" value="" class="month form-control" maxlength="2">
+                            </div>
+                            <div>
+                              <label for="dob-year-input">Year</label>
+                              <input autocomplete="off" type="number" id="dob-year-input" name="dob-year" value="" class="year form-control" maxlength="4">
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="grid-row">
+                        <div class="column--three-quarters" id="postcode">
+                          <label for="postcode" class="form-label">Postcode</label>
+                          <span class="help-block" id="postcode-error" style="display: none;">Please enter your postcode</span>
+                          <input autocomplete="off" type="text" id="postcode-input" name="postcode" value="" class="-small form-control">
+                        </div>
+                      </div>
+
+                      <div class="grid-row">
+                        <div class="column--three-quarters" id="nhs-number">
+                          <label for="nhs-number" class="form-label">NHS Number</label>
+                          <span class="form-label__hint">This is a 10 digit number, like 485 777 3456</span>
+                          <span class="form-label__hint">You can find this on any letter sent to you by NHS or by logging in to a GP practice online service</span>
+                          <span class="help-block" id="nhs-number-error" style="display: none;">Please enter your NHS number</span>
+                          <input autocomplete="off" type="number" id="nhs-number-input" name="nhs-number" value="" class="-small form-control">
+                        </div>
+                      </div>
+
+                      <input type="submit" class="button" id="submit-details" value="Submit">
+
+                    </fieldset>
+
+                  </form>
+              </div>
             </div>
           </div>
       </div>
