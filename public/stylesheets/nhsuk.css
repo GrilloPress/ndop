@@ -2196,7 +2196,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none; }
 
 .-date div {
-  float: left;
+  display: inline-block;
   padding-right: 1em;
   margin-top: 5px; }
 

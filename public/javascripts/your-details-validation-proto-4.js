@@ -43,79 +43,105 @@ function matchDetails() {
 	- Not intnded as any proper validation, just enough to fake it and give the desired respone */
 function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM, dobY, nhsNo){
 
+  //Checks if any of the form fields are empty
+	if (firstName =='' || lastName == '' || postcode == ''|| dobD == '' || dobM == '' || dobY == '' || nhsNo == ''){
+		formComplete = false;
+    $(" .error-summary ").addClass(" error-message-active ");
+    $('html,body').animate({scrollTop: $('#error-summary').offset().top -100});
+	}
+
+	else {
+		formComplete = true;
+	}
+
 	//Checks if the first name field is empty
 	if (firstName ==''){
 		//Adds the validation error css class to the form group and shows the error message
-		$('#first-name').addClass("has-error");
-		$('#first-name-error').show();
+		$('#first-name').addClass("form-row-error-active");
+    $('#first-name').addClass("has-error");
+		$('#first-name-error').addClass( 'error-message-active' );
+    $('#first-name-error-link').remove(); //remove previous link to error if error still active
+    $( "#link-to-errors" ).append( "<li id='first-name-error-link'>" + "<a href='#first-name'>" + "No first name" + "</a>" + "</li>" );
 	}
 
 	else {
 		//Removes the validation error ccs class and hides the error message
 		$('#first-name').removeClass("has-error");
-		$('#first-name-error').hide();
+    $('#first-name').removeClass("form-row-error-active");
+		$('#first-name-error').removeClass( 'error-message-active' );
+    $('#first-name-error-link').remove();
 	}
 
 	//Checks if the last name field is empty
 	if (lastName ==''){
 		//Adds the validation error css class to the form group and shows the error message
 		$('#last-name').addClass("has-error");
-		$('#last-name-error').show();
+    $('#last-name').addClass("form-row-error-active");
+		$('#last-name-error').addClass( 'error-message-active' );
+    $('#last-name-error-link').remove(); //remove previous link to error if error still active
+    $( "#link-to-errors" ).append( "<li id='last-name-error-link'>" + "<a href='#last-name'>" + "No last name" + "</a>" + "</li>" );
 	}
 
 	else {
 		//Removes the validation error ccs class and hides the error message
 		$('#last-name').removeClass("has-error");
-		$('#last-name-error').hide();
+		$('#last-name-error').removeClass( 'error-message-active' );
+    $( '#last-name' ).removeClass("form-row-error-active");
+    $('#last-name-error-link').remove();
 	}
 
 	//Checks if the postode field is empty
 	if (postcode ==''){
 		//Adds the validation error css class to the form group and shows the error message
-		$('#postcode').addClass("has-error");
-		$('#postcode-error').show();
+		$( '#postcode' ).addClass("has-error");
+    $( '#postcode' ).addClass("form-row-error-active");
+		$( '#postcode-error' ).addClass( 'error-message-active' );
+    $('#postcode-error-link').remove(); //remove previous link to error if error still active
+    $( "#link-to-errors" ).append( "<li id='postcode-error-link'>" + "<a href='#postcode'>" + "No postcode provided" + "</a>" + "</li>" );
 	}
 
 	else {
 		//Removes the validation error ccs class and hides the error message
 		$('#postcode').removeClass("has-error");
-		$('#postcode-error').hide();
+    $('#postcode').removeClass("form-row-error-active");
+		$('#postcode-error').removeClass( 'error-message-active' );
+    $('#postcode-error-link').remove();
 	}
 
 	//Checks if any of the date of birth fields are empty
 	if (dobD == '' || dobM == '' || dobY == ''){
 		//Adds the validation error css class to the form group and shows the error message
 		$('#dob').addClass('has-error');
-		$('#dob-error').show();
+    $('#dob').addClass("form-row-error-active");
+		$('#dob-error').addClass( 'error-message-active' );
+    $('#dob-error-link').remove(); //remove previous link to error if error still active
+    $( "#link-to-errors" ).append( "<li id='dob-error-link'>" + "<a href='#dob'>" + "No date of birth provided" + "</a>" + "</li>" );
 	}
 
 	else {
 		//Removes the validation error ccs class and hides the error message
 		$('#dob').removeClass('has-error');
-		$('#dob-error').hide();
+    $('#dob').removeClass("form-row-error-active");
+		$('#dob-error').removeClass( 'error-message-active' );
+    $('#dob-error-link').remove();
 	}
 
-	//Checks if the nhs number field is empty
-	if (postcode ==''){
+  //Checks if the nhs number field is empty
+	if (nhsNo ==''){
 		//Adds the validation error css class to the form group and shows the error message
 		$('#nhs-number').addClass("has-error");
-		$('#nhs-number-error').show();
+		$('#nhs-number').addClass("form-row-error-active");
+    $('#nhs-number-error').addClass( 'error-message-active' );
+    $('#nhs-number-error-link').remove(); //remove previous link to error if error still active
+    $( "#link-to-errors" ).append( "<li id='nhs-number-error-link'>" + "<a href='#nhs-number'>" + "NHS number not provided" + "</a>" + "</li>" );
 	}
 
 	else {
 		//Removes the validation error ccs class and hides the error message
 		$('#nhs-number').removeClass("has-error");
-		$('#nhs-number-error').hide();
-	}
-
-
-	//Checks if any of the form fields are empty
-	if (firstName =='' || lastName == '' || postcode == ''|| dobD == '' || dobM == '' || dobY == '' || nhsNo == ''){
-		formComplete = false;
-	}
-
-	else {
-		formComplete = true;
+    $('#nhs-number').removeClass("form-row-error-active");
+		$('#nhs-number-error').removeClass( 'error-message-active' );
+    $('#nhs-number-error-link').remove();
 	}
 
 	//Returns the status of the form
