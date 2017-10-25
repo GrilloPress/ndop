@@ -29,11 +29,11 @@ function matchDetails() {
 
 	//Only continues if the form is complete
 	if ((firstName == 'lesley') && (formComplete == true)) {
-			window.location.href = 'verification-fail.html';
+			window.location.href = 'http://ndop.herokuapp.com/app/prototypes/lab-5-changes/verification-fail.html';
 		} else if ((formComplete == true) && (firstName == 'alex')) {
-			window.location.href = 'contact-us-1.html';
+			window.location.href = 'http://ndop.herokuapp.com/app/prototypes/lab-5-changes/contact-us-1.html';
 		} else if (formComplete == true) {
-			window.location.href="confirm-your-channel.html"
+			window.location.href="http://ndop.herokuapp.com/app/prototypes/lab-5-changes/confirm-your-channel.html"
 		}
 };
 
