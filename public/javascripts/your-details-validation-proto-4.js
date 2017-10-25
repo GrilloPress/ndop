@@ -90,24 +90,6 @@ function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM
     $('#last-name-error-link').remove();
 	}
 
-	//Checks if the postode field is empty
-	if (postcode ==''){
-		//Adds the validation error css class to the form group and shows the error message
-		$( '#postcode' ).addClass("has-error");
-    $( '#postcode' ).addClass("form-row-error-active");
-		$( '#postcode-error' ).addClass( 'error-message-active' );
-    $('#postcode-error-link').remove(); //remove previous link to error if error still active
-    $( "#link-to-errors" ).append( "<li id='postcode-error-link'>" + "<a href='#postcode'>" + "No postcode provided" + "</a>" + "</li>" );
-	}
-
-	else {
-		//Removes the validation error ccs class and hides the error message
-		$('#postcode').removeClass("has-error");
-    $('#postcode').removeClass("form-row-error-active");
-		$('#postcode-error').removeClass( 'error-message-active' );
-    $('#postcode-error-link').remove();
-	}
-
 	//Checks if any of the date of birth fields are empty
 	if (dobD == '' || dobM == '' || dobY == ''){
 		//Adds the validation error css class to the form group and shows the error message
@@ -124,6 +106,24 @@ function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM
     $('#dob').removeClass("form-row-error-active");
 		$('#dob-error').removeClass( 'error-message-active' );
     $('#dob-error-link').remove();
+	}
+
+  //Checks if the postode field is empty
+	if (postcode ==''){
+		//Adds the validation error css class to the form group and shows the error message
+		$( '#postcode' ).addClass("has-error");
+    $( '#postcode' ).addClass("form-row-error-active");
+		$( '#postcode-error' ).addClass( 'error-message-active' );
+    $('#postcode-error-link').remove(); //remove previous link to error if error still active
+    $( "#link-to-errors" ).append( "<li id='postcode-error-link'>" + "<a href='#postcode'>" + "No postcode provided" + "</a>" + "</li>" );
+	}
+
+	else {
+		//Removes the validation error ccs class and hides the error message
+		$('#postcode').removeClass("has-error");
+    $('#postcode').removeClass("form-row-error-active");
+		$('#postcode-error').removeClass( 'error-message-active' );
+    $('#postcode-error-link').remove();
 	}
 
   //Checks if the nhs number field is empty
