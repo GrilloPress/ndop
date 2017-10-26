@@ -20,6 +20,7 @@
           $('.form-row').addClass("form-row-error-active");
           $('.multiple-choice--checkbox').addClass("checkbox-has-error");
           $('html,body').animate({scrollTop: $('#error-summary').offset().top -100});
+          $( ".error-summary" ).focus();
         }
       })
     })

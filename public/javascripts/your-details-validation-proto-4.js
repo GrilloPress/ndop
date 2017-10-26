@@ -48,6 +48,7 @@ function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM
 		formComplete = false;
     $(" .error-summary ").addClass(" error-message-active ");
     $('html,body').animate({scrollTop: $('#error-summary').offset().top -100});
+    $( ".error-summary" ).focus();
 	}
 
 	else {
