@@ -29,6 +29,13 @@ router.get('/F/:subdir/:view', function(req, res, next) {
   var theDir = req.params.subdir;
   res.render( 'F/' + theDir + '/' + theView );
 });
+
+router.get('/F/:subdir/:subdir2/:view', function(req, res, next) {
+  var theView = req.params.view;
+  var theDir = req.params.subdir;
+  var theDir2 = req.params.subdir2;
+  res.render( 'F/' + theDir + '/' + theDir2 + '/' + theView );
+});
 // // // // // // //
 
 module.exports = router;
