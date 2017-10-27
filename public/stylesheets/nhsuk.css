@@ -2444,9 +2444,14 @@ input::-webkit-inner-spin-button {
 .error-message-active {
   display: block; }
 
-.form-row-error-active {
-  border-left: 5px solid #da291c;
-  padding: 1em; }
+.form-row-error-active .error-label {
+  padding-bottom: 0px;
+  background-image: url(/images/red-exclamation.png);
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  background-position-x: 0%;
+  background-position-y: 50%;
+  background-size: 22px; }
 
 .error-text {
   color: #da291c;

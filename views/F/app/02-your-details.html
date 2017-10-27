@@ -41,12 +41,13 @@
                 <p>You should use the same details you have given your GP.</p>
 
                   <form class="measure" method="post" onsubmit="return !!(formValidation() &amp; matchDetails());">
-                    <fieldset>
                       <div class="grid-row">
                         <div class="column--one-half">
                           <div class="form-group form-row" id="first-name">
-                            <label for="first-name" class="form-label">First name</label>
-                            <span class="error error-message error-text" id="first-name-error">Please enter your first name</span>
+                            <label for="first-name" class="form-label error-label">First name</label>
+                            <span class="error error-message error-text" id="first-name-error">
+                              Please enter your first name
+                            </span>
                             <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
                           </div>
                         </div>
@@ -55,7 +56,7 @@
                       <div class="grid-row">
                         <div class="column--one-half">
                           <div class="form-group form-row" id="last-name">
-                            <label for="last-name" class="form-label">Last name</label>
+                            <label for="last-name" class="form-label error-label">Last name</label>
                             <span class="error error-message error-text" id="last-name-error">Please enter your last name</span>
                             <input autocomplete="off" type="text" class="form-control" id="last-name-input" name="last-name" value="">
                           </div>
@@ -65,7 +66,7 @@
                       <div class="grid-row">
                         <div class="column--one-half">
                           <div class="-date form-group form-row" id="dob">
-                              <label class="form-label">Date of Birth</label>
+                              <label class="form-label error-label">Date of Birth</label>
                               <span class="form-label__hint">For example, '01 04 1980'</span>
                                 <span class="error error-message error-text" id="dob-error">Please enter your date of birth</span>
                               <div>
@@ -88,7 +89,7 @@
                         <div class="column--three-quarters">
                           <div id="postcode">
                             <div class="form-row">
-                              <label for="postcode" class="form-label">Postcode</label>
+                              <label for="postcode" class="form-label error-label">Postcode</label>
                               <span class="error error-message error-text" id="postcode-error">Please enter your postcode</span>
                               <input autocomplete="off" type="text" id="postcode-input" name="postcode" value="" class="-small form-control">
                             </div>
@@ -100,7 +101,7 @@
                         <div class="column--three-quarters" >
                           <div id="nhs-number">
                             <div class="form-row">
-                              <label for="nhs-number" class="form-label">NHS Number</label>
+                              <label for="nhs-number" class="form-label error-label">NHS Number</label>
                               <span class="form-label__hint">This is a 10 digit number, like 485 777 3456</span>
                               <span class="form-label__hint">You can find this on any letter sent to you by NHS or by logging in to a GP practice online service</span>
                               <span class="error error-message error-text" id="nhs-number-error">Please enter your NHS number</span>
@@ -111,9 +112,6 @@
                       </div>
 
                       <input type="submit" class="button" id="submit-details" value="Submit">
-
-                    </fieldset>
-
                   </form>
               </div>
             </div>
