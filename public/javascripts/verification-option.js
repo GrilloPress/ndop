@@ -4,6 +4,7 @@
 //waits for the page to load
 $(window).load(function() {
   $("#choose-option").click(confirmAll);
+  localStorage.clear();
 });
 
 //JS ----------------------------------------------
@@ -16,21 +17,31 @@ function setVerOpt() {
     localStorage.verificationOption = "unrecognised";
   } else if (verificationOption == 'email'){
     localStorage.verificationOption = "email";
+  } else if (verificationOption == 'text') {
+    localStorage.verificationOption = "text"
   } else {
-    localStorage.verificationOption = "mobile"
+    return;
   }
 
 };
 
 //takes user to correct page based on the settings they have set
 function confirm() {
-  var verificationOption = localStorage.verificationOption;
 
-  if ((verificationOption == "email" || verificationOption == "mobile")) {
-    window.location.href = 'http://ndop.herokuapp.com/app/prototypes/prototype-d/enter-your-code.html';
-  } else {
-    window.location.href = 'contact-us.html';
-  }
+    var verificationOption = localStorage.verificationOption;
+
+    if ((verificationOption == "email" || verificationOption == "text")) {
+      window.location.href = 'http://ndop.herokuapp.com/app/prototypes/prototype-d/enter-your-code.html';
+    } else if ( verificationOption == 'unrecognised' ) {
+      window.location.href = 'contact-us.html';
+    } else {
+      $('.form-row').addClass("form-row-error-active");
+      $( '.error-message' ).addClass( 'error-message-active' );
+      $( ".alert-success" ).hide();
+      $(" .error-summary ").addClass(" error-message-active ").focus();
+      $('html,body').animate({scrollTop: $('#error-summary').offset().top -100});
+    }
+
 };
 
 function confirmAll() {
