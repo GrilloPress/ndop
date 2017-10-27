@@ -27,7 +27,7 @@ function confirm() {
   var verificationOption = localStorage.verificationOption;
 
   if ((verificationOption == "email" || verificationOption == "mobile")) {
-    window.location.href = 'enter-your-code.html';
+    window.location.href = 'http://ndop.herokuapp.com/app/prototypes/prototype-d/enter-your-code.html';
   } else {
     window.location.href = 'contact-us.html';
   }

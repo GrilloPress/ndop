@@ -42,7 +42,7 @@
               The code will expire 15 minutes after you have chosen your option.
             </p>
 
-            <form class="form" action="">
+            <form class="form" onsubmit="return !! confirmAll()">
               <div class="form-group form-row">
                 <h2 class="h3">Where should we send your verification code?</h2>
                 <span class="form-label__hint">The full email address and phone number have been hidden for your privacy</span>
@@ -61,7 +61,7 @@
                             I do not recognise this email address or phone number
                         </label>
               </div>
-              <input class="button" type="submit" value="Continue" id="choose-option" />
+              <input id="choose-option" class="button" type="submit" value="Continue" />
             </form>
 
           </div>
