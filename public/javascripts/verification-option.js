@@ -33,7 +33,7 @@ function confirm() {
     if ((verificationOption == "email" || verificationOption == "text")) {
       window.location.href = 'http://ndop.herokuapp.com/app/prototypes/prototype-d/enter-your-code.html';
     } else if ( verificationOption == 'unrecognised' ) {
-      window.location.href = 'contact-us.html';
+      window.location.href = '/F/app/03X-contact-us.html';
     } else {
       $('.form-row').addClass("form-row-error-active");
       $( '.error-message' ).addClass( 'error-message-active' );
