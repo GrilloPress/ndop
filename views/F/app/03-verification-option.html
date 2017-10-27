@@ -1,0 +1,73 @@
+{% block scripts %}
+<script src="/javascripts/radio-checkbox.js"></script>
+<script src="/javascripts/verification-option.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+    <nav aria-label="Breadcrumb">
+      <ol class="list--breadcrumb">
+        <li><a href="/F/">NHS.UK</a></li>
+        <li><a href="/F/01-overview">Your patient health information</a></li>
+        <li><a href="/f/app/index">Register your preference</a></li>
+        <li>Verification Option</li>
+      </ol>
+    </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Verification Option</h1>
+      <div class="local-header__intro">
+          <div class="reading-width">
+            <p>Step 2 of 5</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+<div class="page-section">
+      <div class="reading-width">
+        <div class="grid-row">
+            <div class="column--three-quarters">
+              <div class="reading-width">
+
+        <p class="alert alert-success" role="alert">
+          Success! We've found your details
+        </p>
+
+        <p>We now need to send you a verification code. Your verification code will be sent to the option you choose below.</p><p>
+          The code will expire 15 minutes after you have chosen your option.
+        </p>
+
+        <form class="form" action="">
+          <div class="form-group form-row">
+              <h2 class="h3">Where should we send your verification code?</h2>
+              <span class="form-label__hint">The full email address and phone number have been hidden for your privacy</span>
+                <input type="radio" name="channel-choice" id="email-verification" value="email" class="multiple-choice--radio">
+                <label for="email-verification" class="form-label">
+                    Send an email to al•••••••••••@gmail.com
+                </label>
+
+                <input type="radio" name="channel-choice" id="text-verification" value="text" class="multiple-choice--radio">
+                <label for="text-verification" class="form-label">
+                    Send a text to ••••••••788
+                </label>
+
+                <input type="radio" name="channel-choice" id="unrecognised" value="unrecognised" class="multiple-choice--radio">
+                <label for="unrecognised" class="form-label">
+                    I do not recognise this email address or phone number
+                </label>
+          </div>
+          <input class="button" type="submit" value="Continue" id="choose-option" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </main>
+  {% endblock %}

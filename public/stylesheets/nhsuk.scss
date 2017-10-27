@@ -61,6 +61,7 @@
 @import "components/step-list";
 @import "components/tabs";
 @import "components/error";
+@import "components/alerts";
 
 
 
@@ -70,7 +71,7 @@
 
   color: white;
   margin-top: 5px;
-  
+
 }
 
 // Post grid margin
@@ -117,12 +118,12 @@
 
 }
 
-// inline list 
+// inline list
 
 .list--inline {
 
-  padding-left: 0; 
-  
+  padding-left: 0;
+
   li {
 
     list-style: none;
@@ -133,7 +134,7 @@
 
   .list--unstyled {
 
-    padding-left: 0; 
+    padding-left: 0;
 
     li {
 
@@ -146,13 +147,13 @@
 
     padding-left: 0;
     font-size:    18px;
-  
+
     li {
 
       list-style: none;
-      padding-left: 0; 
+      padding-left: 0;
       display: inline;
-      
+
       // Ignores first li and makes the second li and on have a > before it
         + li:before {
         content: ">";
@@ -161,10 +162,10 @@
       }
     }
   }
-  
+
   .callout-title--muted {
 
     background-color: $grey-4;
     padding: 12px;
-    
+
     }

@@ -2455,6 +2455,117 @@ input::-webkit-inner-spin-button {
 .checkbox-has-error + label::before {
   border-color: #da291c; }
 
+h1, .h1 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    h1, .h1 {
+      font-size: 48px;
+      line-height: 64px; } }
+  @media (min-width: 925px) {
+    h1, .h1 {
+      font-size: 64px;
+      line-height: 80px; } }
+
+h2, .h2 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    h2, .h2 {
+      font-size: 32px;
+      line-height: 48px; } }
+  @media (min-width: 925px) {
+    h2, .h2 {
+      font-size: 36px;
+      line-height: 48px; } }
+
+h3, .h3 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    h3, .h3 {
+      font-size: 24px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    h3, .h3 {
+      font-size: 24px;
+      line-height: 32px; } }
+
+h4, .h4 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    h4, .h4 {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    h4, .h4 {
+      font-size: 20px;
+      line-height: 32px; } }
+
+h5, .h5 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    h5, .h5 {
+      font-size: 16px;
+      line-height: 24px; } }
+  @media (min-width: 925px) {
+    h5, .h5 {
+      font-size: 16px;
+      line-height: 24px; } }
+
+h6 {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    h6 {
+      font-size: 16px;
+      line-height: 24px; } }
+  @media (min-width: 925px) {
+    h6 {
+      font-size: 16px;
+      line-height: 24px; } }
+
+p {
+  font-family: "Frutiger W01", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: none; }
+  @media (min-width: 641px) {
+    p {
+      font-size: 20px;
+      line-height: 32px; } }
+  @media (min-width: 925px) {
+    p {
+      font-size: 20px;
+      line-height: 32px; } }
+
+.alert {
+  padding: 12px; }
+  .alert.alert-success {
+    border: 1px solid #007f3b;
+    background-color: #F5FFFA; }
+
 .local-header__subtitle {
   color: white;
   margin-top: 5px; }
