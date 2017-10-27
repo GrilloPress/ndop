@@ -68,6 +68,12 @@
 
 // Radio Buttons
 
+[type="radio"]{
+  &:focus + label:before {
+    box-shadow: 0 0 0 5px $yellow;
+  }
+}
+
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;

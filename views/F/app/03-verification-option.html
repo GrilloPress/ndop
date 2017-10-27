@@ -1,5 +1,4 @@
 {% block scripts %}
-<script src="/javascripts/radio-checkbox.js"></script>
 <script src="/javascripts/verification-option.js"></script>
 {% endblock %}
 {% extends 'layouts/layout.html' %}
@@ -28,46 +27,48 @@
   </div>
 
 
-<div class="page-section">
-      <div class="reading-width">
-        <div class="grid-row">
-            <div class="column--three-quarters">
-              <div class="reading-width">
+  <div class="page-section">
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--three-quarters">
+          <div class="reading-width">
 
-        <p class="alert alert-success" role="alert">
-          Success! We've found your details
-        </p>
+            <p class="alert alert-success" role="alert">
+              Success! We've found your details
+            </p>
 
-        <p>We now need to send you a verification code. Your verification code will be sent to the option you choose below.</p><p>
-          The code will expire 15 minutes after you have chosen your option.
-        </p>
+            <p>We now need to send you a verification code. Your verification code will be sent to the option you choose below.</p>
+            <p>
+              The code will expire 15 minutes after you have chosen your option.
+            </p>
 
-        <form class="form" action="">
-          <div class="form-group form-row">
-              <h2 class="h3">Where should we send your verification code?</h2>
-              <span class="form-label__hint">The full email address and phone number have been hidden for your privacy</span>
+            <form class="form" action="">
+              <div class="form-group form-row">
+                <h2 class="h3">Where should we send your verification code?</h2>
+                <span class="form-label__hint">The full email address and phone number have been hidden for your privacy</span>
                 <input type="radio" name="channel-choice" id="email-verification" value="email" class="multiple-choice--radio">
-                <label for="email-verification" class="form-label">
-                    Send an email to al•••••••••••@gmail.com
-                </label>
+                <label for="email-verification" class="form-label form-label--radio">
+                            Send an email to al•••••••••••@gmail.com
+                        </label>
 
                 <input type="radio" name="channel-choice" id="text-verification" value="text" class="multiple-choice--radio">
-                <label for="text-verification" class="form-label">
-                    Send a text to ••••••••788
-                </label>
+                <label for="text-verification" class="form-label form-label--radio">
+                            Send a text to ••••••••788
+                        </label>
 
-                <input type="radio" name="channel-choice" id="unrecognised" value="unrecognised" class="multiple-choice--radio">
-                <label for="unrecognised" class="form-label">
-                    I do not recognise this email address or phone number
-                </label>
+                <input type="radio" name="channel-choice" id="unrecognised" value="unrecognised" class="">
+                <label for="unrecognised" class="form-label form-label--radio">
+                            I do not recognise this email address or phone number
+                        </label>
+              </div>
+              <input class="button" type="submit" value="Continue" id="choose-option" />
+            </form>
+
           </div>
-          <input class="button" type="submit" value="Continue" id="choose-option" />
-        </form>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-    </div>
-  </main>
-  {% endblock %}
+  </div>
+</main>
+{% endblock %}
