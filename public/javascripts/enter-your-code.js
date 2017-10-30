@@ -21,6 +21,8 @@ function resendCode() {
 
     $('html,body').animate({scrollTop: $('.alert').offset().top -100});
 
+    $('.alert' ).focus();
+
   } else {
 
     $( ".alert" ).hide().fadeIn( "slow", function() {
@@ -31,6 +33,7 @@ function resendCode() {
 
     $( "#resend-code" ).replaceWith( "<a href='/F/app/04X-contact-us'>Contact us</a>" );
     $('html,body').animate({scrollTop: $('.alert').offset().top -100});
+    $('.alert' ).focus();
   }
 
 }
