@@ -463,6 +463,9 @@ body {
   .util-print-hide {
     display: none; } }
 
+.util-no-heading {
+  margin-top: 0 !important; }
+
 .grid-row {
   margin: 0 -16px; }
   .grid-row:after {
