@@ -1,5 +1,11 @@
 //Javascript to direct user to correct confirmation page based on their data sharing preferences
 
+// Check that form is filled out
+// Serve errors if not
+// save options to local/session storage
+// direct to next page, where preferences are stored and displayed
+// On the next page, if not preferences are set, it will be random
+
 //Sets research opt in preferences to session
 function setResearchPref() {
   var researchPref = $('input[name="research-pref"]:checked').val();
