@@ -5,6 +5,9 @@
 $(window).load(function() {
   $("#choose-option").click(confirmAll);
   localStorage.clear();
+  $( ".alert" ).fadeIn( 1000, function() {
+  // Animation complete
+  });
 });
 
 //JS ----------------------------------------------
@@ -29,7 +32,7 @@ function setVerOpt() {
 function confirm() {
 
     var verificationOption = localStorage.verificationOption;
-    
+
     if ((verificationOption == "email" || verificationOption == "text")) {
       window.location.href = 'http://ndop.herokuapp.com/app/prototypes/prototype-d/enter-your-code.html';
     } else if ( verificationOption == 'unrecognised' ) {

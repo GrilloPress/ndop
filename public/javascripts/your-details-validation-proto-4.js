@@ -58,8 +58,7 @@ function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM
 	//Checks if the first name field is empty
 	if (firstName ==''){
 		//Adds the validation error css class to the form group and shows the error message
-		$('#first-name').addClass("form-row-error-active");
-    $('#first-name').addClass("has-error");
+		$('#first-name').addClass("form-row-error-active has-error");
 		$('#first-name-error').addClass( 'error-message-active' );
     $('#first-name-error-link').remove(); //remove previous link to error if error still active
     $( "#link-to-errors" ).append( "<li id='first-name-error-link'>" + "<a href='#first-name'>" + "No first name" + "</a>" + "</li>" );
