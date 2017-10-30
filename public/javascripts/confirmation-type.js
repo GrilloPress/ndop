@@ -1,6 +1,22 @@
 $(window).load(function() {
 	confirmationChecker();
+  preferenceChecker();
 });
+
+function preferenceChecker() {
+  var researchPref = sessionStorage.researchPref;
+  var planningPref = sessionStorage.planningPref;
+
+  // This is now an ugly hack...
+
+  var researchPrefText = ( researchPref == "true"  ) ?  "<p>Your health data <strong>will</strong> be shared for research purposes | <a href='/F/app/05-make-your-choice' onclick='history.go(-1); return false;'>Edit</a></p>" : "<p>Your health data <strong>will not</strong> be shared for research purposes | <a href='/F/app/05-make-your-choice' onclick='history.go(-1); return false;'>Edit</a></p>";
+
+  var planningPrefText = ( planningPref == "true" ) ?  "<p>Your health data <strong>will</strong> be shared for planning purposes | <a href='/F/app/05-make-your-choice' onclick='history.go(-1); return false;'>Edit</a></p>" : "<p>Your health data <strong>will not</strong> be shared for planning purposes | <a href='/F/app/05-make-your-choice' onclick='history.go(-1); return false;'>Edit</a></p>";
+
+  $( '#your-planning-preferences' ).after( planningPrefText );
+  $( '#your-research-preferences' ).after( researchPrefText );
+
+};
 
 function confirmationChecker() {
   var confirmationType = localStorage.verificationOption;
@@ -10,7 +26,9 @@ function confirmationChecker() {
 	} else if (confirmationType == "mobile") {
 		$("#mobile-confirm").show();
 	} else {
-		$("#post-confirm").show();
+    $("#mobile-confirm").show();
+		return
+    // do we still want to do this? $("#post-confirm").show();
 	}
 
 };
