@@ -1,0 +1,40 @@
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+    <nav aria-label="Breadcrumb">
+      <ol class="list--breadcrumb">
+        <li><a href="#">NHS.UK</a></li>
+        <li><a href="/F/01-overview">Your patient health information</a></li>
+        <li>Verification failure</li>
+      </ol>
+    </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Verification failure</h1>
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              <p>Sorry, we were unable to find a unique match for your details.</p>
+
+              <p>If you plan to visit your GP anytime soon, speak to them about your patient information sharing preferences instead. </p>
+
+              <p>
+                <a href="/F/01-overview">Find out more about registering your preference for sharing your health data </a>
+              </p>
+            </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}
