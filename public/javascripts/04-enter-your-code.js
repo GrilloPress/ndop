@@ -53,7 +53,7 @@ function submitCode() {
     // if 666 handle as error?
 
   } else {
-    window.location.href = "http://ndop.herokuapp.com/app/prototypes/lab-5-changes/make-your-choice.html";
+    window.location.href = "/F/app/05-make-your-choice";
   }
 
 }
