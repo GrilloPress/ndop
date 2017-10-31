@@ -58,7 +58,7 @@ function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM
 		$('#first-name').addClass("form-row-error-active has-error");
 		$('#first-name-error').addClass( 'error-message-active' );
     $('#first-name-error-link').remove(); //remove previous link to error if error still active
-    $( "#link-to-errors" ).append( "<li id='first-name-error-link'>" + "<a href='#first-name'>" + "No first name" + "</a>" + "</li>" );
+    $( "#link-to-errors" ).append( "<li id='first-name-error-link'>" + "<a href='#first-name'>" + "First name is missing" + "</a>" + "</li>" );
 	}
 
 	else {
@@ -76,7 +76,7 @@ function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM
     $('#last-name').addClass("form-row-error-active");
 		$('#last-name-error').addClass( 'error-message-active' );
     $('#last-name-error-link').remove(); //remove previous link to error if error still active
-    $( "#link-to-errors" ).append( "<li id='last-name-error-link'>" + "<a href='#last-name'>" + "No last name" + "</a>" + "</li>" );
+    $( "#link-to-errors" ).append( "<li id='last-name-error-link'>" + "<a href='#last-name'>" + "Last name is missing" + "</a>" + "</li>" );
 	}
 
 	else {
@@ -94,7 +94,7 @@ function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM
     $('#dob').addClass("form-row-error-active");
 		$('#dob-error').addClass( 'error-message-active' );
     $('#dob-error-link').remove(); //remove previous link to error if error still active
-    $( "#link-to-errors" ).append( "<li id='dob-error-link'>" + "<a href='#dob'>" + "No date of birth provided" + "</a>" + "</li>" );
+    $( "#link-to-errors" ).append( "<li id='dob-error-link'>" + "<a href='#dob'>" + "Date of birth is missing" + "</a>" + "</li>" );
 	}
 
 	else {
@@ -112,7 +112,7 @@ function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM
     $( '#postcode' ).addClass("form-row-error-active");
 		$( '#postcode-error' ).addClass( 'error-message-active' );
     $('#postcode-error-link').remove(); //remove previous link to error if error still active
-    $( "#link-to-errors" ).append( "<li id='postcode-error-link'>" + "<a href='#postcode'>" + "No postcode provided" + "</a>" + "</li>" );
+    $( "#link-to-errors" ).append( "<li id='postcode-error-link'>" + "<a href='#postcode'>" + "Postcode is missing" + "</a>" + "</li>" );
 	}
 
 	else {
@@ -130,7 +130,7 @@ function formValidation (formComplete, firstName, lastName, postcode, dobD, dobM
 		$('#nhs-number').addClass("form-row-error-active");
     $('#nhs-number-error').addClass( 'error-message-active' );
     $('#nhs-number-error-link').remove(); //remove previous link to error if error still active
-    $( "#link-to-errors" ).append( "<li id='nhs-number-error-link'>" + "<a href='#nhs-number'>" + "NHS number not provided" + "</a>" + "</li>" );
+    $( "#link-to-errors" ).append( "<li id='nhs-number-error-link'>" + "<a href='#nhs-number'>" + "NHS number is missing" + "</a>" + "</li>" );
 	}
 
 	else {
