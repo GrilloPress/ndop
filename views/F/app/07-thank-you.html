@@ -1,0 +1,55 @@
+{% block scripts %}
+<script src="/javascripts/07-thank-you.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+    <nav aria-label="Breadcrumb">
+      <ol class="list--breadcrumb">
+        <li><a href="#">NHS.UK</a></li>
+        <li><a href="/F/01-overview">Your patient health information</a></li>
+        <li>Thank you</li>
+      </ol>
+    </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Thank you</h1>
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              <p class="alert alert-success" role="alert" style="display:none;" tabindex="-1">Your preferences have been saved</p>
+              <p>
+                It can take up to 21 days before your decision can be applied to future data releases leaving NHS Digital. Your preferences will be applied gradually across all organisations that use patient health information.
+              </p>
+              <p>
+                By 2020, your preference will be acknowledged by all organisations that may request access to your patient data.
+              </p>
+              <ul class="link-list">
+                <li>
+                  <a href="http://content.digital.nhs.uk/dataregister">More information on data releases (external website)</a>
+                </li>
+                <li>
+                  <a href="http://content.digital.nhs.uk/yourinfo">More information on your choices (external website)</a>
+                </li>
+              </ul>
+              <div class="callout callout--attention" id="further-questions-banner">
+                <p>
+                We’d like to gain a better understanding of your experience here today, so that we can continue to improve this service.
+                </p>
+                <p>
+                <a href="https://beta.nhs.uk/help/cookies">Help us by filling in a short survey</a>
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</main>
+{% endblock %}

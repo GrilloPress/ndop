@@ -1,5 +1,4 @@
 //Javascript to direct user to correct confirmation page based on their data sharing preferences
-
 // Check that form is filled out
 // Serve errors if not
 // save options to local/session storage

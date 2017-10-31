@@ -7,9 +7,6 @@ $(window).load(function() {
 	$(".help-block").hide();
 });
 
-
-//JS -----------------------------------------------------------------------------------------------------------------------
-
 function matchDetails() {
 
 	var firstName = $("#first-name-input").val().toLowerCase();
