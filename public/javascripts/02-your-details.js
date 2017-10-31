@@ -26,7 +26,7 @@ function matchDetails() {
 
 	//Only continues if the form is complete
 	if ((firstName == 'lesley') && (formComplete == true)) {
-			window.location.href = 'http://ndop.herokuapp.com/app/prototypes/lab-5-changes/verification-fail.html';
+			window.location.href = '/F/app/02X-verification-fail';
 		} else if ((formComplete == true) && (firstName == 'alex')) {
 			window.location.href = '/F/app/02X-contact-us';
 		} else if (formComplete == true) {
