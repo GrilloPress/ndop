@@ -1,0 +1,71 @@
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/bit/">NHS.UK</a></li>
+      <li><a href="/bit/01-overview">Your patient health information</a></li>
+      <li>Keeping data secure</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Register your preference for sharing patient health information</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--one-half">
+              <ol>
+                <li><a href="/bit/01-overview">Overview</a></li>
+                <li><a href="/bit/02-understanding-health-data">Understanding health data</a></li>
+                <li><a href="/bit/03-benefits-of-data-sharing">Benefits of data sharing</a></li>
+                <li><a href="/bit/04-your-data-our-pledge">Your data - our pledge</a></li>
+              </ol>
+            </div>
+            <div class="column--one-half">
+              <ol start="5">
+                <li>Keeping data secure</li>
+                <li><a href="/bit/06-your-choice-to-opt-out">Your choice to opt-out</a></li>
+                <li><a href="/bit/07-registering-your-preferences">Registering your preferencess</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <h2>5. Keeping data secure</h2>
+              <p>Health and care services take the responsibility for protecting your personally identifiable data very seriously. Your data is important for your individual care and for improving health and social care services in England.</p>
+              <h3>Data controllers</h3>
+              <p>
+                An organisation that collects and uses identifiable information is known as a data controller. Data controllers have a legal duty to take care of your data and provide details of what is being collected. They will only share your information for very specific and reasons that have a legal basis.
+              </p>
+              <p>
+                The law gives you the right to confidentiality under the common-law duty of confidentiality, and protection in the way information about you is handled under the Data Protection Act (1998). You have the right to obtain information from an organisation if you want to know how data about you is stored and used.
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="page-section">
+      <div class="reading-width">
+            {{ patterns.page_nav( "Your data - our pledge", "/bit/04-your-data-our-pledge", "Your choice to opt-out", "/bit/06-your-choice-to-opt-out" ) }}
+      </div>
+    </div>
+
+
+
+</main>
+
+{% endblock %}

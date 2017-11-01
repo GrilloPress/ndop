@@ -1,0 +1,61 @@
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/">Index</a></li>
+      <li>Prototype BIT</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Prototype BIT</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <p>November 2017</p>
+        </div>
+      </div>
+    </div>
+
+    <p>This Prototype was created in response to the user research labs that ran in September 2017.</p>
+    <p>The prototype intoduces a multi-page guide to benefits of data sharing as well as the process behind opting out</p>
+    <a role="button" class="button" href="/bit/01-overview">Start Prototype</a>
+    <hr>
+    <h2 id="prototype-sections">Prototype sections</h2>
+    <div class="grid-row">
+      <div class="column--one-half">
+        <h3>Pages</h3>
+        <ol>
+          <li><a href="/F/01-overview">Overview (Landing page)</a></li>
+          <li><a href="/F/02-understanding-health-data">Understanding health data</a></li>
+          <li><a href="/F/03-sharing-your-data">Sharing your data</a></li>
+          <li><a href="/F/04-benefits-of-data-sharing">Benefits of data sharing</a></li>
+          <li><a href="/F/05-securing-your-information">How your data is kept secure</a></li>
+          <li><a href="/F/06-opting-out">How the opt-out process works</a></li>
+          <li><a href="/F/07-register-your-preference">Register your preference</a></li>
+        </ol>
+      </div>
+      <div class="column--one-half">
+
+      </div>
+
+    </div>
+
+    <h2 id="design-hypotheses">Design hypotheses</h2>
+    <h3>October</h3>
+    <ol>
+      <li><strong>If</strong> we add a page list to our local header, <strong>then</strong> we will improve navigation <strong>because</strong> users will easily be able to find further information about how the NHS handles their data</li>
+      <li><strong>If</strong> we add a navigation element to the bottom of our content pages, <strong>then</strong> we will improve navigation <strong>because</strong> users can quickly jump to the next peice of information</li>
+      <li><strong>If</strong> we add a back link to the top of our content pages, <strong>then</strong> we will improve navigation <strong>because</strong> users can quickly jump back</li>
+      <li><strong>If</strong> we reduce the width of text in the content pages, <strong>then</strong> we will improve text comprehension and readability <strong>because</strong> studies show that text no wider than 600px is easier to read for users</li>
+      <li><strong>If</strong> we add breadcrumbs to the top of each content page, <strong>then</strong> we will improve navigation <strong>because</strong> users will be able to just back to the landing page in one click</li>
+    </ol>
+
+    {{ patterns.page_nav( "Prototype F - October", "/F/", "", "" ) }}
+
+    </div>
+</main>
+{% endblock %}
