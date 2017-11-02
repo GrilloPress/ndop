@@ -38,12 +38,12 @@ router.get('/F/:subdir/:subdir2/:view', function(req, res, next) {
 });
 // // // // // // //
 
-// GET v1 index page.
+// GET BIT index page.
 router.get('/bit', function(req, res, next) {
   res.render( 'bit/index' );
 });
 
-// GET all v1 URL reqs and push them to a template in the v1 file
+// GET all BIT URL reqs and push them to a template in the v1 file
 // This feels really brittle and hacky...
 // No handling of no view found...
 router.get('/bit/:view', function(req, res, next) {
@@ -62,6 +62,33 @@ router.get('/bit/:subdir/:subdir2/:view', function(req, res, next) {
   var theDir = req.params.subdir;
   var theDir2 = req.params.subdir2;
   res.render( 'bit/' + theDir + '/' + theDir2 + '/' + theView );
+});
+// // // // // // //
+
+// GET BIT index page.
+router.get('/Y', function(req, res, next) {
+  res.render( 'Y/index' );
+});
+
+// GET all Y URL reqs and push them to a template in the v1 file
+// This feels really brittle and hacky...
+// No handling of no view found...
+router.get('/Y/:view', function(req, res, next) {
+  var theView = req.params.view;
+  res.render( 'Y/' + theView );
+});
+
+router.get('/Y/:subdir/:view', function(req, res, next) {
+  var theView = req.params.view;
+  var theDir = req.params.subdir;
+  res.render( 'Y/' + theDir + '/' + theView );
+});
+
+router.get('/Y/:subdir/:subdir2/:view', function(req, res, next) {
+  var theView = req.params.view;
+  var theDir = req.params.subdir;
+  var theDir2 = req.params.subdir2;
+  res.render( 'Y/' + theDir + '/' + theDir2 + '/' + theView );
 });
 // // // // // // //
 

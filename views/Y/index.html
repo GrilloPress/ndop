@@ -1,0 +1,103 @@
+{% set title = 'Prototype Y' %}
+{% set PROTOTYPE_URL = 'Y'%}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/">Index</a></li>
+      <li>Prototype Y</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Prototype F</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <p>October 2017</p>
+        </div>
+      </div>
+    </div>
+
+    <p>This Prototype is a highly experimental version which takes the user through the entire journey, including explaining the ins and outs of opting out as the user goes through the proecss</p>
+    <a role="button" class="button" href="/{{PROTOTYPE_URL}}/start">Start Prototype</a>
+    <hr>
+    <h2 id="prototype-sections">Prototype sections</h2>
+    <div class="grid-row">
+      <div class="column--one-half">
+        <h3>Pages</h3>
+        <p>
+          The hypothesis behind this prototype is that there is no significant landing page.
+        </p>
+      </div>
+      <div class="column--one-half">
+        <h3>App and related pages</h3>
+        <ol>
+          <li>
+            <a href="/F/app/index">App landing page</a>
+          </li>
+        </ol>
+        <h4>Additional components</h4>
+        <ol>
+
+        </ol>
+        <ul>
+
+        </ul>
+      </div>
+
+    </div>
+
+
+
+    <h2 id="research">Research</h2>
+    <div class="grid-row">
+      <div class="column--one-third">
+        <img src="/images/research/IMG_20171009_093310.jpg" alt="" height="auto" width="100%">
+      </div>
+      <div class="column--one-third">
+        <img src="/images/research/IMG_20171009_093322.jpg" alt="" height="auto" width="100%">
+      </div>
+      <div class="column--one-third">
+        <img src="/images/research/IMG_20171009_093328.jpg" alt="" height="auto" width="100%">
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="column--one-third">
+        <img src="/images/research/IMG_20171009_093335.jpg" alt="" height="auto" width="100%">
+      </div>
+      <div class="column--one-third">
+        <img src="/images/research/IMG_20171009_093344.jpg" alt="" height="auto" width="100%">
+      </div>
+      <div class="column--one-third">
+        <img src="/images/research/IMG_20171009_093351.jpg" alt="" height="auto" width="100%">
+      </div>
+    </div>
+    <p>The result of the research conducted in September was that:</p>
+    <ul class="list--check">
+      <li>Users were able to follow the opt-out form</li>
+      <li>Users were able to understand 2-factor verification</li>
+      <li>Users were able to complete opt-out the process</li>
+    </ul>
+    <ul class="list--cross">
+      <li>Users felt overwhelmed with the volume of information on the landing page</li>
+      <li>Users felt overwhelmed with the volume of information on the information pages</li>
+      <li>Users found the navigation between pages difficult</li>
+      <li>Users didn't know how to use the back button or used a device on which that was difficult</li>
+      <li>Users felt the information was too forceful</li>
+    </ul>
+
+    <h2 id="design-hypotheses">Design hypotheses</h2>
+    <h3>November</h3>
+    <ol>
+      <li><strong>If</strong> we provde the users with information in the process, <strong>then</strong> we will improve user comprehension and navigation <strong>because</strong> users will be taken through a singular journey that confirms their understanding through each step</li>
+    </ol>
+
+    {{ patterns.page_nav( "Prototype F", "/F/", "", "" ) }}
+
+    </div>
+</main>
+{% endblock %}
