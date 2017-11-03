@@ -20,6 +20,11 @@
 
 ///////////////////////////////////////
 
+.form-label--inline {
+
+  margin-right: 1.5rem;
+
+}
 .form-label--large {
   @include bold-font(36);
 }

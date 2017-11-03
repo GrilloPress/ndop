@@ -1976,6 +1976,9 @@ p {
 .form-label--radio {
   font-weight: normal; }
 
+.form-label--inline {
+  margin-right: 1.5rem; }
+
 .form-label--large {
   font-family: "Frutiger W01", Arial, sans-serif;
   font-size: 28px;
