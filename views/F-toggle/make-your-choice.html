@@ -1,4 +1,5 @@
 {% block scripts %}
+<script src="/javascripts/f-toggle/make-your-choice.js"></script>
 {% endblock %}
 {% extends 'layouts/layout.html' %}
 
@@ -30,22 +31,21 @@
         <div class="column--three-quarters">
           <div class="reading-width">
 
-            <form class="form" action="#">
+            <form class="form" action="javascript:confirmAll();">
                 <div id="research-question" class="form-group form-row util-no-margin">
                   <h2>Research preferences</h2>
                   <p>Patient Identifiable Data can be used in research to improve treatment for serious illnesses. It can also be used to prevent and find a cure for diseases, like diabetes and heart disease.</p>
                   <p>
                     Share data for research:
                   </p>
-                  <div class="checkbox-container">
+                  <div id="research-toggle" class="checkbox-container">
                     <span class="form-label form-label--inline">Allow</span>
                     <label class="switch-light switch-material switch-material--reversed form-label--inline">
-                      <input type="checkbox">
-
+                      <input name="research-pref" type="checkbox">
                       <span class="">
                         <span>Allow</span>
                         <span>Disallow</span>
-                        <a></a>
+                        <a onclick="console.log('hello')"></a>
                       </span>
                     </label>
                     <span class="form-label form-label--inline">Disallow</span>
@@ -61,7 +61,7 @@
                   <div class="checkbox-container">
                     <span class="form-label form-label--inline">Allow</span>
                     <label class="switch-light switch-material switch-material--reversed form-label--inline">
-                      <input type="checkbox">
+                      <input name="planning-pref" type="checkbox">
                       <span class="">
                         <span>Allow</span>
                         <span>Disallow</span>
@@ -73,12 +73,9 @@
 
                 </div>
 
-              <input id="submit-pref" class="button" type="submit" name="submit-pref" value="Set your preferences">
+              <input id="submit-pref" class="button" type="submit" name="submit-pref" value="Submit">
 
             </form>
-
-
-
           </div>
         </div>
       </div>
