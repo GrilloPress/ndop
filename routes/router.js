@@ -92,4 +92,13 @@ router.get('/Y/:subdir/:subdir2/:view', function(req, res, next) {
 });
 // // // // // // //
 
+// GET BIT index page.
+router.get('/F-toggle', function(req, res, next) {
+  res.render( 'F-toggle/index' );
+});
+
+router.get('/F-toggle/make-your-choice', function(req, res, next) {
+  res.render( 'F-toggle/make-your-choice' );
+});
+
 module.exports = router;
