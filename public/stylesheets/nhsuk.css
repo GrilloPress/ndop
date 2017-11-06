@@ -2634,9 +2634,9 @@ p {
     line-height: 2em; }
   .switch-light input:focus ~ span a,
   .switch-light input:focus + label {
-    outline-width: 2px;
+    outline-width: 3px;
     outline-style: solid;
-    outline-color: Highlight;
+    outline-color: #ffb81c;
     /* Chrome/Opera gets its native focus styles.
      */ } }
 
@@ -2644,7 +2644,9 @@ p {
   .switch-light input:focus ~ span a,
   .switch-light input:focus + label {
     outline-color: -webkit-focus-ring-color;
-    outline-style: auto; } }
+    outline-width: 3px;
+    outline-style: solid;
+    outline-color: #ffb81c; } }
 
 @media only screen {
   /* don't hide the input from screen-readers and keyboard access

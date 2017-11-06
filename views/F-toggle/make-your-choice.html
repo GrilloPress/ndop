@@ -1,3 +1,5 @@
+{% set title = 'Set your preferences' %}
+{% set PROTOTYPE_URL = 'F-toggle'%}
 {% block scripts %}
 <script src="/javascripts/f-toggle/make-your-choice.js"></script>
 {% endblock %}
@@ -9,14 +11,14 @@
 
     <nav aria-label="Breadcrumb">
       <ol class="list--breadcrumb">
-        <li><a href="#">NHS.UK</a></li>
-        <li><a href="/F/01-overview">Your patient health information</a></li>
-        <li>Set your preferences</li>
+        <li><a href="/">NHS.UK</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/">Your patient health information</a></li>
+        <li>{{title}}</li>
       </ol>
     </nav>
 
     <div class="local-header">
-      <h1 class="local-header__title">Set your preferences</h1>
+      <h1 class="local-header__title">{{title}}</h1>
       <div class="local-header__intro">
         <div class="reading-width">
           <p>Step 4 of 5</p>
@@ -42,10 +44,10 @@
                     <span class="form-label form-label--inline">Allow</span>
                     <label class="switch-light switch-material switch-material--reversed form-label--inline">
                       <input name="research-pref" type="checkbox">
-                      <span class="">
+                      <span class="" onclick="console.log('hello')">
                         <span>Allow</span>
                         <span>Disallow</span>
-                        <a onclick="console.log('hello')"></a>
+                        <a></a>
                       </span>
                     </label>
                     <span class="form-label form-label--inline">Disallow</span>
@@ -62,7 +64,7 @@
                     <span class="form-label form-label--inline">Allow</span>
                     <label class="switch-light switch-material switch-material--reversed form-label--inline">
                       <input name="planning-pref" type="checkbox">
-                      <span class="">
+                      <span class="" onclick="console.log('there')">
                         <span>Allow</span>
                         <span>Disallow</span>
                         <a></a>
