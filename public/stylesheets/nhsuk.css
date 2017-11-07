@@ -2900,7 +2900,7 @@ p {
     width: 4em;
     height: 4em;
     border-radius: 100%;
-    background: #3f51b5;
+    background: #003087;
     opacity: .4;
     margin-left: -1.25em;
     margin-top: -1.25em;
@@ -2955,7 +2955,7 @@ p {
 
 .switch-material--reversed.switch-material.switch-light input:checked ~ span a {
   background: white;
-  border: 2px solid #da291c;
+  border: 2px solid #005eb8;
   top: -4px; }
 
 .checkbox-container {
