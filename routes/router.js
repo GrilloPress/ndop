@@ -101,4 +101,9 @@ router.get('/F-toggle/make-your-choice', function(req, res, next) {
   res.render( 'F-toggle/make-your-choice' );
 });
 
+// Lab 6
+router.get('/lab-6', function(req, res, next) {
+  res.render( 'lab-6/index' );
+});
+
 module.exports = router;
