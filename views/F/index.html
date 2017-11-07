@@ -1,3 +1,5 @@
+{% set title = 'Prototype F' %}
+{% set PROTOTYPE_URL = 'F'%}
 {% extends 'layouts/layout.html' %}
 
 {% block body %}
@@ -7,12 +9,12 @@
   <nav aria-label="Breadcrumb">
     <ol class="list--breadcrumb">
       <li><a href="/">Index</a></li>
-      <li>Prototype F</li>
+      <li>{{title}}</li>
     </ol>
   </nav>
 
     <div class="local-header">
-      <h1 class="local-header__title">Prototype F</h1>
+      <h1 class="local-header__title">{{title}}</h1>
       <div class="local-header__intro">
         <div class="reading-width">
           <p>October-November 2017</p>
@@ -50,6 +52,15 @@
           <li><a href="/F/05-securing-your-information">How your data is kept secure</a></li>
           <li><a href="/F/06-opting-out">How the opt-out process works</a></li>
           <li><a href="/F/07-register-your-preference">Register your preference</a></li>
+        </ol>
+        <h3>Related prototypes</h3>
+        <ol>
+          <li>
+            <a href="/F-toggle">F Toggle (Toggle preference setting)</a>
+          </li>
+          <li>
+            <a href="/bit">bit (Content streamlining)</a>
+          </li>
         </ol>
       </div>
       <div class="column--one-half">
