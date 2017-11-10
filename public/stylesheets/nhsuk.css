@@ -2052,7 +2052,6 @@ p {
   .multiple-choice--checkbox + label:before {
     content: '';
     margin-right: 10px;
-    display: inline-block;
     vertical-align: middle;
     width: 34px;
     height: 34px;
@@ -2098,8 +2097,7 @@ p {
 [type="radio"]:not(:checked) + label {
   position: relative;
   padding-left: 50px;
-  cursor: pointer;
-  display: inline-block; }
+  cursor: pointer; }
 
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {

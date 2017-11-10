@@ -15,7 +15,7 @@
   & + label:before {
     content: '';
     margin-right: 10px;
-    display: inline-block;
+    // display: inline-block;
     vertical-align: middle;
     width: 34px;
     height: 34px;
@@ -85,7 +85,7 @@
     position: relative;
     padding-left: 50px;
     cursor: pointer;
-    display: inline-block;
+    // display: inline-block;
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
