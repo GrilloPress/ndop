@@ -40,9 +40,16 @@
                   <p>
                     Share data for research:
                   </p>
-                  <div id="research-toggle">
+                  <div id="research-toggle" class="checkbox-container">
                     <span class="form-label form-label--inline">Allow</span>
-                    <input id="research" value="0" type="range" min="0" max="1" step="1">
+                    <label class="switch-light switch-material switch-material--reversed-v2 form-label--inline">
+                      <input name="research-pref" type="checkbox">
+                      <span class="" onclick="console.log('hello')">
+                        <span>Allow</span>
+                        <span>Disallow</span>
+                        <a></a>
+                      </span>
+                    </label>
                     <span class="form-label form-label--inline">Disallow</span>
                   </div>
                 </div>
