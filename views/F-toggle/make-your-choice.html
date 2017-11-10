@@ -6,7 +6,7 @@
 {% extends 'layouts/layout.html' %}
 
 {% block body %}
-<main id="content" role="main">
+<main id="content toggle-v2" role="main">
   <div class="page-section">
 
     <nav aria-label="Breadcrumb">
@@ -35,14 +35,14 @@
 
             <form class="form" action="javascript:confirmAll();">
                 <div id="research-question" class="form-group form-row util-no-margin">
-                  <h2>Research preferences</h2>
+                  <h2>Research preference</h2>
                   <p>Patient Identifiable Data can be used in research to improve treatment for serious illnesses. It can also be used to prevent and find a cure for diseases, like diabetes and heart disease.</p>
                   <p>
                     Share data for research:
                   </p>
                   <div id="research-toggle" class="checkbox-container">
                     <span class="form-label form-label--inline">Allow</span>
-                    <label class="switch-light switch-material switch-material--reversed form-label--inline">
+                    <label class="switch-light switch-material switch-material--reversed-v2 form-label--inline">
                       <input name="research-pref" type="checkbox">
                       <span class="" onclick="console.log('hello')">
                         <span>Allow</span>
@@ -55,14 +55,14 @@
                 </div>
 
                 <div id="planning-question" class="form-group form-row">
-                  <h2>Planning preferences</h2>
+                  <h2>Planning preference</h2>
                   <p>Patient Identifiable Data is used to manage and prepare health and social care services in England. The NHS can plan and review essential services, like heart units and specialist care wards.</p>
                   <p>
                     Share data for planning:
                   </p>
                   <div class="checkbox-container">
                     <span class="form-label form-label--inline">Allow</span>
-                    <label class="switch-light switch-material switch-material--reversed form-label--inline">
+                    <label class="switch-light switch-material switch-material--reversed-v2 form-label--inline">
                       <input name="planning-pref" type="checkbox">
                       <span class="" onclick="console.log('there')">
                         <span>Allow</span>

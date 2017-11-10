@@ -2961,6 +2961,26 @@ p {
 .checkbox-container {
   margin-top: -1em; }
 
+.switch-material--reversed-v2.switch-material.switch-light > span {
+  background: #005eb8;
+  border: 1px solid #231f20; }
+
+.switch-material--reversed-v2.switch-light.switch-material a {
+  background: white;
+  border: 2px solid #0078eb;
+  top: 0;
+  height: 1.4em;
+  width: 1.4em; }
+
+.switch-material--reversed-v2.switch-material.switch-light input:checked ~ span {
+  background: #bcc4c9;
+  border: 1px solid #231f20; }
+
+.switch-material--reversed-v2.switch-material.switch-light input:checked ~ span a {
+  background: white;
+  border: 2px solid #525f67;
+  top: 0; }
+
 /* Bugfix for older Webkit, including mobile Webkit. Adapted from
  * http://css-tricks.com/webkit-sibling-bug/
  */

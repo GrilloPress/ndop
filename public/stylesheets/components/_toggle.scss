@@ -400,6 +400,46 @@
   margin-top: -1em;
 }
 
+// Toggle V2 Namespace
+
+.switch-material--reversed-v2 {
+
+  &.switch-material.switch-light > span {
+
+    background: $blue;
+    border: 1px solid $black;
+
+  }
+
+  &.switch-light.switch-material a {
+
+    background: white;
+    border: 2px solid lighten($blue, 10%);
+    top: 0;
+    height: 1.4em;
+    width: 1.4em;
+
+  }
+
+  &.switch-material.switch-light input:checked ~ span {
+
+    background: darken( $grey-4, 10% );
+    border: 1px solid $black;
+
+
+  }
+
+  &.switch-material.switch-light input:checked ~ span a {
+
+    background: white;
+    border: 2px solid darken( $grey-4, 50% );
+    top: 0;
+  }
+
+
+}
+
+
 
 /* Bugfix for older Webkit, including mobile Webkit. Adapted from
  * http://css-tricks.com/webkit-sibling-bug/
