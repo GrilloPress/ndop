@@ -1,0 +1,88 @@
+{% set title = 'Set your preferences' %}
+{% set PROTOTYPE_URL = 'F-toggle'%}
+{% block scripts %}
+<script src="/javascripts/f-toggle/make-your-choice.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+    <nav aria-label="Breadcrumb">
+      <ol class="list--breadcrumb">
+        <li><a href="/">NHS.UK</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/">Your patient health information</a></li>
+        <li>{{title}}</li>
+      </ol>
+    </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">{{title}}</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <p>Step 4 of 5</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-section">
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--three-quarters">
+          <div class="reading-width">
+
+            <form class="form" action="javascript:confirmAll();">
+                <div id="research-question" class="form-group form-row util-no-margin">
+                  <h2>Research preferences</h2>
+                  <p>Patient Identifiable Data can be used in research to improve treatment for serious illnesses. It can also be used to prevent and find a cure for diseases, like diabetes and heart disease.</p>
+                  <p>
+                    Share data for research:
+                  </p>
+                  <div id="research-toggle" class="checkbox-container">
+                    <span class="form-label form-label--inline">Allow</span>
+                    <label class="switch-light switch-material switch-material--reversed form-label--inline">
+                      <input name="research-pref" type="checkbox">
+                      <span class="" onclick="console.log('hello')">
+                        <span>Allow</span>
+                        <span>Disallow</span>
+                        <a></a>
+                      </span>
+                    </label>
+                    <span class="form-label form-label--inline">Disallow</span>
+                  </div>
+                </div>
+
+                <div id="planning-question" class="form-group form-row">
+                  <h2>Planning preferences</h2>
+                  <p>Patient Identifiable Data is used to manage and prepare health and social care services in England. The NHS can plan and review essential services, like heart units and specialist care wards.</p>
+                  <p>
+                    Share data for planning:
+                  </p>
+                  <div class="checkbox-container">
+                    <span class="form-label form-label--inline">Allow</span>
+                    <label class="switch-light switch-material switch-material--reversed form-label--inline">
+                      <input name="planning-pref" type="checkbox">
+                      <span class="" onclick="console.log('there')">
+                        <span>Allow</span>
+                        <span>Disallow</span>
+                        <a></a>
+                      </span>
+                    </label>
+                    <span class="form-label form-label--inline">Disallow</span>
+                  </div>
+
+                </div>
+
+              <input id="submit-pref" class="button" type="submit" name="submit-pref" value="Submit">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+{% endblock %}
