@@ -2085,6 +2085,9 @@ p {
     zoom: 1;
     filter: alpha(opacity=0); }
 
+.blue-checkbox + label:before {
+  display: inline-block; }
+
 [type="radio"]:focus + label:before {
   box-shadow: 0 0 0 5px #ffb81c; }
 

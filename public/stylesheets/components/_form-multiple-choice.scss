@@ -66,6 +66,12 @@
   }
 }
 
+.blue-checkbox + label:before {
+
+  display: inline-block;
+
+}
+
 // Radio Buttons
 
 [type="radio"]{
