@@ -2,6 +2,7 @@
 {% set PROTOTYPE_URL = 'F-toggle'%}
 {% block scripts %}
 <script src="/javascripts/f-toggle/make-your-choice.js"></script>
+<script src="/javascripts/f-toggle/range.js"></script>
 {% endblock %}
 {% extends 'layouts/layout.html' %}
 
@@ -53,16 +54,9 @@
                   <p>
                     Share data for planning:
                   </p>
-                  <div class="checkbox-container">
+                  <div id="planning-toggle">
                     <span class="form-label form-label--inline">Allow</span>
-                    <label class="switch-light switch-material switch-material--reversed-v2 form-label--inline">
-                      <input name="planning-pref" type="checkbox">
-                      <span class="" onclick="console.log('there')">
-                        <span>Allow</span>
-                        <span>Disallow</span>
-                        <a></a>
-                      </span>
-                    </label>
+                    <input id="planning" value="0" type="range" min="0" max="1" step="1">
                     <span class="form-label form-label--inline">Disallow</span>
                   </div>
 
