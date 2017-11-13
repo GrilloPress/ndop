@@ -25,9 +25,9 @@ function matchDetails() {
 	formComplete = formValidation(formComplete, firstName, lastName, postcode, dobD, dobM, dobY, nhsNo);
 
 	//Only continues if the form is complete
-	if ((firstName == 'lesley') && (formComplete == true)) {
+	if ((firstName == 'devil') && (formComplete == true)) {
 			window.location.href = '/F/app/02X-verification-fail';
-		} else if ((formComplete == true) && (firstName == 'alex')) {
+		} else if ((formComplete == true) && (firstName == 'satan')) {
 			window.location.href = '/F/app/02X-contact-us';
 		} else if (formComplete == true) {
 			window.location.href="/F/app/03-verification-option"
