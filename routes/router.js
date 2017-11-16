@@ -92,6 +92,33 @@ router.get('/Y/:subdir/:subdir2/:view', function(req, res, next) {
 });
 // // // // // // //
 
+
+// GET all Y URL reqs and push them to a template in the v1 file
+// This feels really brittle and hacky...
+// No handling of no view found...
+router.get('/single-question', function(req, res, next) {
+  res.render( 'single-question/index' );
+});
+
+router.get('/single-question/:view', function(req, res, next) {
+  var theView = req.params.view;
+  res.render( 'single-question/' + theView );
+});
+
+router.get('/single-question/:subdir/:view', function(req, res, next) {
+  var theView = req.params.view;
+  var theDir = req.params.subdir;
+  res.render( 'single-question/' + theDir + '/' + theView );
+});
+
+router.get('/single-question/:subdir/:subdir2/:view', function(req, res, next) {
+  var theView = req.params.view;
+  var theDir = req.params.subdir;
+  var theDir2 = req.params.subdir2;
+  res.render( 'single-question/' + theDir + '/' + theDir2 + '/' + theView );
+});
+// // // // // // //
+
 // GET BIT index page.
 router.get('/F-toggle', function(req, res, next) {
   res.render( 'F-toggle/index' );

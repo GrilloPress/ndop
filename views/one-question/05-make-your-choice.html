@@ -1,0 +1,72 @@
+{% set title = 'Set your preference' %}
+{% set PROTOTYPE_URL = 'one-question'%}
+{% block scripts %}
+<script src="/javascripts/{PROTOTYPE_URL}/05-make-your-choice.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+    <nav aria-label="Breadcrumb">
+      <ol class="list--breadcrumb">
+        <li><a href="/{PROTOTYPE_URL}/">NHS.UK</a></li>
+        <li><a href="/{PROTOTYPE_URL}/index">Register your preference</a></li>
+        <li>{title}</li>
+      </ol>
+    </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">{title}</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <p>Step 4 of 5</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-section">
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--three-quarters">
+          <div class="reading-width">
+            <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+              <h2 class="h3" id="error-summary">Please indicate your data sharing preference to continue</h2>
+              <ul class="link-list" id="link-to-errors">
+              </ul>
+            </div>
+
+            <p>Your personally identifiable data can be used for improving health, care and services, including:</p>
+            <ul>
+              <li>
+                planning to improve health and care services
+              </li>
+              <li>
+                research to find a cure for serious illnesses
+              </li>
+            </ul>
+
+            <form class="form" action="javascript:confirmAll();">
+                <div id="single-question" class="form-group form-row util-no-margin">
+                  <h2>I opt-out of my data being used for research and planning</h2>
+                  <input type="radio" name="single-pref" id="single-opted-out" value="single-opted-out" class="form-label form-label--radio">
+                  <label for="single-opted-out" class="form-label form-label--inline form-label--radio multiple-choice--radio">
+                    Yes
+                  </label>
+                  <input type="radio" name="single-pref" id="single-opted-in" value="single-opted-in" class="multiple-choice--radio">
+                  <label for="single-opted-in" class="form-label form-label--inline form-label--radio multiple-choice--radio">
+                    No
+                  </label>
+                </div>
+              <input id="submit-pref" class="button" type="submit" name="submit-pref" value="Continue">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+{% endblock %}
