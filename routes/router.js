@@ -96,26 +96,26 @@ router.get('/Y/:subdir/:subdir2/:view', function(req, res, next) {
 // GET all Y URL reqs and push them to a template in the v1 file
 // This feels really brittle and hacky...
 // No handling of no view found...
-router.get('/single-question', function(req, res, next) {
-  res.render( 'single-question/index' );
+router.get('/one-question', function(req, res, next) {
+  res.render( 'one-question/index' );
 });
 
-router.get('/single-question/:view', function(req, res, next) {
+router.get('/one-question/:view', function(req, res, next) {
   var theView = req.params.view;
-  res.render( 'single-question/' + theView );
+  res.render( 'one-question/' + theView );
 });
 
-router.get('/single-question/:subdir/:view', function(req, res, next) {
+router.get('/one-question/:subdir/:view', function(req, res, next) {
   var theView = req.params.view;
   var theDir = req.params.subdir;
-  res.render( 'single-question/' + theDir + '/' + theView );
+  res.render( 'one-question/' + theDir + '/' + theView );
 });
 
-router.get('/single-question/:subdir/:subdir2/:view', function(req, res, next) {
+router.get('/one-question/:subdir/:subdir2/:view', function(req, res, next) {
   var theView = req.params.view;
   var theDir = req.params.subdir;
   var theDir2 = req.params.subdir2;
-  res.render( 'single-question/' + theDir + '/' + theDir2 + '/' + theView );
+  res.render( 'one-question/' + theDir + '/' + theDir2 + '/' + theView );
 });
 // // // // // // //
 
