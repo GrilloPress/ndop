@@ -1,8 +1,8 @@
 {% set title = 'Confirm who you are' %}
-{% set PROTOTYPE_URL = 'one-question'%}
+{% set PROTOTYPE_URL = 'one-question' %}
 {% block scripts %}
 <script src="/javascripts/radio-checkbox.js"></script>
-<script src="/javascripts/{PROTOTYPE_URL}/01-confirm-who-you-are.js"></script>
+<script src="/javascripts/{{PROTOTYPE_URL}}/01-confirm-who-you-are.js"></script>
 {% endblock %}
 {% extends 'layouts/layout.html' %}
 
@@ -12,8 +12,8 @@
 
   <nav aria-label="Breadcrumb">
     <ol class="list--breadcrumb">
-      <li><a href="/{PROTOTYPE_URL}/">NHS.UK</a></li>
-      li><a href="/{PROTOTYPE_URL}/index">Register your preference</a></li>
+      <li><a href="/{{PROTOTYPE_URL}}/">NHS.UK</a></li>
+      <li><a href="/{{PROTOTYPE_URL}}/index">Register your preference</a></li>
       <li>Confirm who you are</li>
     </ol>
   </nav>
@@ -48,7 +48,7 @@
       </div>
 
       <h2 class="h3">You must agree to the following statement by ticking the box</h2>
-      <form id="form" action="/{PROTOTYPE_URL}/app/02-your-details">
+      <form id="form" action="/{{PROTOTYPE_URL}}/02-your-details">
         <div class="form-row ">
           <div class="callout callout--warning">
             <div id="incomplete-checkbox" class="error error-message">

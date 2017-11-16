@@ -21,7 +21,7 @@ function matchDetails() {
 	var formComplete = false;
 
 	//Checks the status of the form
-	formComplete = formValidation(formComplete, firstName, lastName, postcode, dobD, dobM, dobY, nhsNo);
+	formComplete = formValidation(formComplete, firstName, lastName, dobD, dobM, dobY, nhsNo);
 
 	//Only continues if the form is complete
 	if ((firstName == 'devil') && (formComplete == true)) {

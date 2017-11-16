@@ -25,9 +25,9 @@ function confirm() {
   var singlePref = sessionStorage.singlePref;
 
   if (singlePref == "true") {
-    window.location.href = '/single-question/06-confirm-your-choice';
+    window.location.href = '/one-question/06-confirm-your-choice';
   } else if (singlePref == "false") {
-    window.location.href = '/single-question/06-confirm-your-choice';
+    window.location.href = '/one-question/06-confirm-your-choice';
   } else {
     $(" .error-summary ").addClass(" error-message-active ").focus();
 

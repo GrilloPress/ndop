@@ -1,7 +1,7 @@
 {% set title = 'Set your preference' %}
 {% set PROTOTYPE_URL = 'one-question'%}
 {% block scripts %}
-<script src="/javascripts/{PROTOTYPE_URL}/05-make-your-choice.js"></script>
+<script src="/javascripts/{{PROTOTYPE_URL}}/05-make-your-choice.js"></script>
 {% endblock %}
 {% extends 'layouts/layout.html' %}
 
@@ -11,14 +11,14 @@
 
     <nav aria-label="Breadcrumb">
       <ol class="list--breadcrumb">
-        <li><a href="/{PROTOTYPE_URL}/">NHS.UK</a></li>
-        <li><a href="/{PROTOTYPE_URL}/index">Register your preference</a></li>
-        <li>{title}</li>
+        <li><a href="/{{PROTOTYPE_URL}}/">NHS.UK</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/index">Register your preference</a></li>
+        <li>{{title}}</li>
       </ol>
     </nav>
 
     <div class="local-header">
-      <h1 class="local-header__title">{title}</h1>
+      <h1 class="local-header__title">{{title}}</h1>
       <div class="local-header__intro">
         <div class="reading-width">
           <p>Step 4 of 5</p>
@@ -50,7 +50,7 @@
 
             <form class="form" action="javascript:confirmAll();">
                 <div id="single-question" class="form-group form-row util-no-margin">
-                  <h2>I opt-out of my data being used for research and planning</h2>
+                  <h2 class="h3">I opt-out of my data being used for research and planning</h2>
                   <input type="radio" name="single-pref" id="single-opted-out" value="single-opted-out" class="form-label form-label--radio">
                   <label for="single-opted-out" class="form-label form-label--inline form-label--radio multiple-choice--radio">
                     Yes
