@@ -1,0 +1,95 @@
+{% set title = 'Sharing your data - Register your preferences for sharing patient health data' %}
+{% set PROTOTYPE_URL = 'one-question'%}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/{{PROTOTYPE_URL}}/">NHS.UK</a></li>
+      <li><a href="/{{PROTOTYPE_URL}}/01-overview">Your patient health information</a></li>
+      <li>Sharing your data</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Register your preferences for sharing patient health data</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--one-half">
+              <ol>
+                <li><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
+                <li><a href="/{{PROTOTYPE_URL}}/02-understanding-health-data">Understanding health data</a></li>
+                <li>Sharing your data</li>
+                <li><a href="/{{PROTOTYPE_URL}}/04-benefits-of-data-sharing">Benefits of data sharing</a></li>
+              </ol>
+            </div>
+            <div class="column--one-half">
+              <ol start="5">
+                <li><a href="/{{PROTOTYPE_URL}}/05-securing-your-information">How data is kept secure</a></li>
+                <li><a href="/{{PROTOTYPE_URL}}/06-opting-out">How opting out works</a></li>
+                <li><a href="/{{PROTOTYPE_URL}}/07-register-your-preference">Register your preferences</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <h2>3. Sharing your data</h2>
+              <h3>Data controllers</h3>
+              <p>An organisation that collects and uses identifiable information is known as a data controller. They have a legal duty to take care of your data and provide details of what is being collected. They will only share your information for very specific reasons.</p>
+              <h3>Completely confidential</h3>
+              <p>The law gives you the right to confidentiality under the common-law duty of confidentiality, and protection in the way information about you is handled under the Data Protection Act (1998). You have the right to obtain information from an organisation if you want to know how data about you is stored and used.</p>
+              <h3>Request for information</h3>
+              <p>
+                NHS Digital has responsibility for collecting data from across the health and care system. These consist of national data sets that define a standard set of information that is collected from a wide variety of NHS trusts, local authorities and independent sector organisations.
+              </p>
+              <p>Certain organisations can request access to this health and care data. If released, this information must be used to support the delivery of health and social care services in England.</p>
+              <p>Your data can be used in research and planning to:</p>
+              <ul>
+                <li>improve medicines and treatments</li>
+                <li>prevent illness and serious diseases</li>
+                <li>organise and arrange care services</li>
+                <li>prepare for health emergencies and epidemics</li>
+              </ul>
+              <h3>Legal contracts</h3>
+              <p>Before any data can be released, a legal contract must be signed between NHS Digital and the organisation requesting information. This states the rules on what an organisation can do with shared data. It also contains clear limits on what cannot be done and what is forbidden.</p>
+              <p>A legal contract for data sharing will include:</p>
+              <ul>
+                <li>the type of data being shared</li>
+                <li>how the data is being shared</li>
+                <li>the purpose for sharing data</li>
+                <li>a date for when the data must be destroyed</li>
+                <li>all other data security conditions</li>
+              </ul>
+              <p>An organisation cannot link this information with any other data, or use the data to re-identify a patient in any way. The information will never be sent to a third-party organisation or used for marketing purposes. An organisation may also be audited to ensure data is used appropriately.</p>
+              <h2>Further information</h2>
+              <ul class="link-list">
+                <li><a title="Patient data sharing" target="_blank" href="https://understandingpatientdata.org.uk/">More information on patient data sharing (external website)</a></li>
+                <li><a title="Information requests" target="_blank" href="http://content.digital.nhs.uk/article/4981/Information-requests-from-organisations">More details on information requests (external website)</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-section">
+      <div class="reading-width">
+        {{ patterns.page_nav( "Understanding health data", "/one-question/02-understanding-health-data", "Benefits of data sharing", "/one-question/04-benefits-of-data-sharing" ) }}
+      </div>
+    </div>
+</main>
+
+{% endblock %}

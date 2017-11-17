@@ -1,0 +1,99 @@
+{% set title = 'Prototype F - One question' %}
+{% set PROTOTYPE_URL = 'one-question'%}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/">Index</a></li>
+      <li>{{title}}</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">{{title}}</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <p>November 2017</p>
+        </div>
+      </div>
+    </div>
+
+    <p>This Prototype was created to explore the use of a single question for the opt-out stage of the users journey</p>
+    <p>
+      The prototype also adds:
+    </p>
+    <a role="button" class="button" href="/{{PROTOTYPE_URL}}/01-overview">Start Prototype</a>
+    <hr>
+    <h2 id="prototype-sections">Prototype sections</h2>
+    <div class="grid-row">
+      <div class="column--one-half">
+        <h3>Pages</h3>
+        <ol>
+          <li><a href="/{{PROTOTYPE_URL}}/01-overview">Overview (Landing page)</a></li>
+          <li><a href="/{{PROTOTYPE_URL}}/02-understanding-health-data">Understanding health data</a></li>
+          <li><a href="/{{PROTOTYPE_URL}}/03-sharing-your-data">Sharing your data</a></li>
+          <li><a href="/{{PROTOTYPE_URL}}/04-benefits-of-data-sharing">Benefits of data sharing</a></li>
+          <li><a href="/{{PROTOTYPE_URL}}/05-securing-your-information">How your data is kept secure</a></li>
+          <li><a href="/{{PROTOTYPE_URL}}/06-opting-out">How the opt-out process works</a></li>
+          <li><a href="/{{PROTOTYPE_URL}}/07-register-your-preference">Register your preference</a></li>
+        </ol>
+      </div>
+      <div class="column--one-half">
+        <h3>App and related pages</h3>
+        <ol>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/index">App landing page</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/01-confirm-who-you-are">Confirm who you are</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/02-your-details">Your details</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/03-verification-option">Verification option</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/04-enter-your-code">Enter your code</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/05-make-your-choice">Enter your code</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/06-confirm-your-choice">Confirm your preference</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/07-thank-you">Thank you</a>
+          </li>
+          <li>
+            <a href="/{{PROTOTYPE_URL}}/app/08-survey">(Optional Survey page)</a>
+          </li>
+        </ol>
+        <h4>Additional components</h4>
+        <ol>
+          <li><a href="/{{PROTOTYPE_URL}}/app/02X-verification-fail">Verification error</a></li>
+          <li><a href="/{{PROTOTYPE_URL}}/app/02X-contact-us">Cannot confirm your details</a></li>
+          <li><a href="/{{PROTOTYPE_URL}}/app/03X-contact-us">Wrong details for you</a></li>
+          <li><a href="/{{PROTOTYPE_URL}}/app/04X-contact-us">Cannot get a code</a></li>
+        </ol>
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="design-hypotheses">Design hypotheses</h2>
+    <h3>November</h3>
+    <ol>
+      <li><strong>If</strong> ..., <strong>then</strong> ... <strong>because</strong>  ... </li>
+    </ol>
+
+    {{ patterns.page_nav( "Prototype F", "/F/", "", "" ) }}
+
+    </div>
+</main>
+{% endblock %}
