@@ -31,7 +31,7 @@ function resendCode() {
     $( "#resend-notice" ).hide().fadeIn( "slow", function() {
     });
 
-    $( "#resend-code" ).replaceWith( "<a href='/one-question/04X-contact-us'>Contact us</a>" );
+    $( "#resend-code" ).replaceWith( "<a href='/one-question/app/04X-contact-us'>Contact us</a>" );
     $('html,body').animate({scrollTop: $('.alert').offset().top -100});
     $('.alert' ).focus();
   }
@@ -53,7 +53,7 @@ function submitCode() {
     // if 666 handle as error?
 
   } else {
-    window.location.href = "/one-question/05-make-your-choice";
+    window.location.href = "/one-question/app/05-make-your-choice";
   }
 
 }
