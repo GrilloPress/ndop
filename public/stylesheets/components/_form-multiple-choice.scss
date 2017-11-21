@@ -66,10 +66,63 @@
   }
 }
 
-.blue-checkbox + label:before {
+.checkbox-blue + label:before {
 
   display: inline-block;
 
+}
+
+// Hack to give the checkbox space below it and the looooooong checkbox text a container so as not to flow around it
+
+.checkbox-container {
+
+  @include media(tablet) {
+
+    min-height: 120px;
+  }
+
+  @include media(desktop) {
+
+    min-height: 140px;
+  }
+
+  @include media(mobile) {
+
+    min-height: 190px;
+  }
+
+  .checkbox-long-text {
+
+    width: 90%;
+    float: right;
+
+
+    @include media(mobile) {
+
+      width: 80%;
+
+    }
+
+  }
+
+}
+
+.checkbox-container-has-error {
+
+  @include media(tablet) {
+
+    min-height: 180px;
+  }
+
+  @include media(desktop) {
+
+    min-height: 200px;
+  }
+
+  @include media(mobile) {
+
+    min-height: 290px;
+  }
 }
 
 // Radio Buttons

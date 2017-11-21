@@ -19,6 +19,7 @@
           $('.error-message').addClass("error-message-active");
           $('.form-row').addClass("form-row-error-active");
           $('.multiple-choice--checkbox').addClass("checkbox-has-error");
+          $('.checkbox-container').addClass("checkbox-container-has-error");
           $('html,body').animate({scrollTop: $('#error-summary').offset().top -100});
           $( ".error-summary" ).focus();
         }
