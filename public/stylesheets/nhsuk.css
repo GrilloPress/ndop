@@ -2492,8 +2492,8 @@ input::-webkit-inner-spin-button {
   background-size: 22px; }
 
 .form-row-error-active .error-label-checkbox {
-  padding-left: 65px;
-  background-position-x: 0.5%; }
+  padding-left: 70px;
+  background-position-x: 1%; }
   @media (max-width: 640px) {
     .form-row-error-active .error-label-checkbox {
       background-position-x: 1.5%; } }
