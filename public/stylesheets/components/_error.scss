@@ -25,6 +25,18 @@
    background-position-x: 0%;
    background-position-y: 50%;
    background-size: 22px;
+
+  }
+
+  .error-label-checkbox {
+
+   padding-left: 65px;
+   background-position-x: 1%;
+
+   @include media(mobile) {
+
+     background-position-x: 1.5%;
+   }
   }
 
 }

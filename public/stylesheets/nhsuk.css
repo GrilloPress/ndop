@@ -2117,7 +2117,7 @@ p {
 
 @media (max-width: 640px) {
   .checkbox-container-has-error {
-    min-height: 250px; } }
+    min-height: 290px; } }
 
 [type="radio"]:focus + label:before {
   box-shadow: 0 0 0 5px #ffb81c; }
@@ -2490,6 +2490,13 @@ input::-webkit-inner-spin-button {
   background-position-x: 0%;
   background-position-y: 50%;
   background-size: 22px; }
+
+.form-row-error-active .error-label-checkbox {
+  padding-left: 65px;
+  background-position-x: 0.5%; }
+  @media (max-width: 640px) {
+    .form-row-error-active .error-label-checkbox {
+      background-position-x: 1.5%; } }
 
 .error-text {
   color: #da291c;
