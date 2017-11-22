@@ -1,3 +1,5 @@
+{% set title = 'Sharing your data - Register your preference for sharing patient health data' %}
+{% set PROTOTYPE_URL = 'one-question'%}
 {% block scripts %}
 {% endblock %}
 {% extends 'layouts/layout.html' %}
@@ -8,30 +10,30 @@
 
   <nav aria-label="Breadcrumb">
     <ol class="list--breadcrumb">
-      <li><a href="/F/">NHS.UK</a></li>
-      <li><a href="/F/01-overview">Your patient health information</a></li>
+      <li><a href="/{{PROTOTYPE_URL}}/">NHS.UK</a></li>
+      <li><a href="/{{PROTOTYPE_URL}}/01-overview">Your patient health information</a></li>
       <li>Sharing your data</li>
     </ol>
   </nav>
 
     <div class="local-header">
-      <h1 class="local-header__title">Register your preferences for sharing patient health data</h1>
+      <h1 class="local-header__title">Register your preference for sharing patient health data</h1>
       <div class="local-header__intro">
         <div class="reading-width">
           <div class="grid-row">
             <div class="column--one-half">
               <ol>
-                <li><a href="/F/01-overview">Overview</a></li>
-                <li><a href="/F/02-understanding-health-data">Understanding health data</a></li>
+                <li><a href="/{{PROTOTYPE_URL}}/01-overview">Overview</a></li>
+                <li><a href="/{{PROTOTYPE_URL}}/02-understanding-health-data">Understanding health data</a></li>
                 <li>Sharing your data</li>
-                <li><a href="/F/04-benefits-of-data-sharing">Benefits of data sharing</a></li>
+                <li><a href="/{{PROTOTYPE_URL}}/04-benefits-of-data-sharing">Benefits of data sharing</a></li>
               </ol>
             </div>
             <div class="column--one-half">
               <ol start="5">
-                <li><a href="/F/05-securing-your-information">How data is kept secure</a></li>
-                <li><a href="/F/06-opting-out">How opting out works</a></li>
-                <li><a href="/F/07-register-your-preference">Register your preferences</a></li>
+                <li><a href="/{{PROTOTYPE_URL}}/05-securing-your-information">How data is kept secure</a></li>
+                <li><a href="/{{PROTOTYPE_URL}}/06-opting-out">How opting out works</a></li>
+                <li><a href="/{{PROTOTYPE_URL}}/07-register-your-preference">Register your preference</a></li>
               </ol>
             </div>
           </div>
@@ -44,7 +46,7 @@
       <div class="reading-width">
           <div class="grid-row">
             <div class="column--two-thirds">
-              <h2>3. Sharing your data</h2>
+              <h2 id="sharing-your-data">3. Sharing your data</h2>
               <h3>Data controllers</h3>
               <p>An organisation that collects and uses identifiable information is known as a data controller. They have a legal duty to take care of your data and provide details of what is being collected. They will only share your information for very specific reasons.</p>
               <h3>Completely confidential</h3>
@@ -72,7 +74,7 @@
                 <li>all other data security conditions</li>
               </ul>
               <p>An organisation cannot link this information with any other data, or use the data to re-identify a patient in any way. The information will never be sent to a third-party organisation or used for marketing purposes. An organisation may also be audited to ensure data is used appropriately.</p>
-              <h2>Further information</h2>
+              <h2 id="further-information">Further information</h2>
               <ul class="link-list">
                 <li><a title="Patient data sharing" target="_blank" href="https://understandingpatientdata.org.uk/">More information on patient data sharing (external website)</a></li>
                 <li><a title="Information requests" target="_blank" href="http://content.digital.nhs.uk/article/4981/Information-requests-from-organisations">More details on information requests (external website)</a></li>
@@ -82,12 +84,6 @@
       </div>
     </div>
 
-
-    <div class="page-section">
-      <div class="reading-width">
-        {{ patterns.page_nav( "Understanding health data", "/F/02-understanding-health-data", "Benefits of data sharing", "/F/04-benefits-of-data-sharing" ) }}
-      </div>
-    </div>
 </main>
 
 {% endblock %}
