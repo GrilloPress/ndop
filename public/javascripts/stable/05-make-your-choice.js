@@ -40,13 +40,13 @@ function confirm() {
   var planningPref = sessionStorage.planningPref;
 
   if (researchPref == "true" && planningPref == "true") {
-    window.location.href = '/F/app/06-confirm-your-choice';
+    window.location.href = '/stable/app/06-confirm-your-choice';
   } else if (researchPref == "true" && planningPref == "false") {
-    window.location.href = '/F/app/06-confirm-your-choice';
+    window.location.href = '/stable/app/06-confirm-your-choice';
   } else if (researchPref == "false" && planningPref == "true") {
-    window.location.href = '/F/app/06-confirm-your-choice';
+    window.location.href = '/stable/app/06-confirm-your-choice';
   } else if (researchPref == "false" && planningPref == "false") {
-    window.location.href = '/F/app/06-confirm-your-choice';
+    window.location.href = '/stable/app/06-confirm-your-choice';
   } else {
     $(" .error-summary ").addClass(" error-message-active ").focus();
 
