@@ -1,3 +1,5 @@
+{% set title = 'Thank you' %}
+{% set PROTOTYPE_URL = 'stable'%}
 {% block scripts %}
 <script src="/javascripts/07-thank-you.js"></script>
 {% endblock %}
@@ -9,14 +11,14 @@
 
     <nav aria-label="Breadcrumb">
       <ol class="list--breadcrumb">
-        <li><a href="/F/">NHS.UK</a></li>
-        <li><a href="/F/01-overview">Your patient health information</a></li>
-        <li>Thank you</li>
+        <li><a href="/{{PROTOTYPE_URL}}/">NHS.UK</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/app/index">Register your preferences</a></li>
+        <li>{{title}}</li>
       </ol>
     </nav>
 
     <div class="local-header">
-      <h1 class="local-header__title">Thank you</h1>
+      <h1 class="local-header__title">{{title}}</h1>
     </div>
   </div>
 
@@ -29,7 +31,7 @@
                 It can take up to 21 days before your decision can be applied to future data releases leaving NHS Digital. Your preferences will be applied gradually across all organisations that use patient health information.
               </p>
               <p>
-                By 2020, your preference will be acknowledged by <a href="/F/06-opting-out">all organisations that may request access to your patient data</a>.
+                By 2020, your preferences will be acknowledged by <a href="/{{PROTOTYPE_URL}}/06-opting-out">all organisations that may request access to your patient data</a>.
               </p>
               <p>
                 You can reset your preferences at any time in the future using this service. <a href="#" onclick='history.go(-2); return false;'>Edit your preferences</a>
@@ -39,7 +41,7 @@
                 We’d like to gain a better understanding of your experience here today, so that we can continue to improve this service.
                 </p>
                 <p>
-                <a href="/F/app/08-survey">Help us by filling in a short survey</a>
+                <a href="/{{PROTOTYPE_URL}}/app/08-survey">Help us by filling in a short survey</a>
                 </p>
               </div>
             </div>

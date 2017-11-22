@@ -1,3 +1,5 @@
+{% set title = 'Verification failure' %}
+{% set PROTOTYPE_URL = 'stable'%}
 {% block scripts %}
 {% endblock %}
 {% extends 'layouts/layout.html' %}
@@ -8,14 +10,14 @@
 
     <nav aria-label="Breadcrumb">
       <ol class="list--breadcrumb">
-        <li><a href="/F/">NHS.UK</a></li>
-        <li><a href="/F/01-overview">Your patient health information</a></li>
-        <li>Verification failure</li>
+        <li><a href="/{{PROTOTYPE_URL}}/">NHS.UK</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/01-overview">Your patient health information</a></li>
+        <li>{{title}}</li>
       </ol>
     </nav>
 
     <div class="local-header">
-      <h1 class="local-header__title">Verification failure</h1>
+      <h1 class="local-header__title">{{title}}</h1>
     </div>
   </div>
 
@@ -28,7 +30,7 @@
               <p>If you plan to visit your GP anytime soon, speak to them about your patient information sharing preferences instead. </p>
 
               <p>
-                <a href="/F/01-overview">Find out more about registering your preference for sharing your health data </a>
+                <a href="/{{PROTOTYPE_URL}}/app/index">Find out more about registering your preferences for sharing your health data </a>
               </p>
             </div>
             </div>

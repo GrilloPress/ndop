@@ -1,3 +1,5 @@
+{% set title = 'Survey' %}
+{% set PROTOTYPE_URL = 'stable' %}
 {% block scripts %}
 <script src="/javascripts/08-survey.js"></script>
 {% endblock %}
@@ -9,14 +11,14 @@
 
     <nav aria-label="Breadcrumb">
       <ol class="list--breadcrumb">
-        <li><a href="/F/">NHS.UK</a></li>
-        <li><a href="/F/01-overview">Your patient health information</a></li>
-        <li>Survey</li>
+        <li><a href="/{{PROTOTYPE_URL}}/">NHS.UK</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/app/index">Register your preferences</a></li>
+        <li>{{title}}</li>
       </ol>
     </nav>
 
     <div class="local-header">
-      <h1 class="local-header__title">Survey</h1>
+      <h1 class="local-header__title">{{title}}</h1>
     </div>
   </div>
 
@@ -40,7 +42,7 @@
               </p>
               <form class="form" action="javascript:survey();">
                 <div class="form-group form-row">
-                  <h2 class="h3">Did anyone help you today to complete the health data preference service?</h2>
+                  <h2 class="h3">Did anyone help you today to complete the health data preferences service?</h2>
                   <span class="form-label__hint">For example a family member or friend</span>
 
                   <div class="error error-message" id="error-message">

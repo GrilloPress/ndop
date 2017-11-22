@@ -1,3 +1,5 @@
+{% set title = 'Set your preference' %}
+{% set PROTOTYPE_URL = 'stable'%}
 {% block scripts %}
 <script src="/javascripts/05-make-your-choice.js"></script>
 {% endblock %}
@@ -9,14 +11,14 @@
 
     <nav aria-label="Breadcrumb">
       <ol class="list--breadcrumb">
-        <li><a href="/F/">NHS.UK</a></li>
-        <li><a href="/F/01-overview">Your patient health information</a></li>
-        <li>Set your preferences</li>
+        <li><a href="/{{PROTOTYPE_URL}}/">NHS.UK</a></li>
+        <li><a href="/{{PROTOTYPE_URL}}/app/index">Register your preference</a></li>
+        <li>{{title}}</li>
       </ol>
     </nav>
 
     <div class="local-header">
-      <h1 class="local-header__title">Set your preferences</h1>
+      <h1 class="local-header__title">{{title}}</h1>
       <div class="local-header__intro">
         <div class="reading-width">
           <p>Step 4 of 5</p>
