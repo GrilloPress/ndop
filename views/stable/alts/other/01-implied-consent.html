@@ -1,0 +1,47 @@
+{% block scripts %}
+<script src="/javascripts/radio-checkbox.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/F/">NHS.UK</a></li>
+      <li><a href="/F/01-overview">Your patient health information</a></li>
+      <li><a href="/f/app/index">Register your preference</a></li>
+      <li>Confirm who you are</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 id="confirm-who-you-are" class="local-header__title">Confirm who you are</h1>
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              <div class="reading-width">
+                 <p>For security reasons we must check who you are. We will do this by sending you a text message or email with a unique security code. Don’t worry, you do not have to give us your contact details here. </p>
+                 <p>If you have registered your mobile or email with an NHS GP practice, clinic or hospital we will be able to find the details by matching your name, postcode, date of birth and NHS number.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="page-section">
+    <div class="reading-width">
+      <h2 class="h3">By pressing continue I allow the NHS to use my email address or mobile phone number to check who I am</h2>
+      <form id="form" action="/F/app/02-your-details">
+        <input class="button" type="submit" value="Continue">
+      </form>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

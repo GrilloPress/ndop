@@ -1,0 +1,67 @@
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/F/">NHS.UK</a></li>
+      <li><a href="/F/alts/simple-landing-page/01-overview">Your patient health information</a></li>
+      <li>Benefits of data sharing</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Benefits of data sharing</h1>
+    </div>
+  </div>
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--two-thirds">
+              <p>Your patient health information is shared between doctors, hospitals and dentists for reasons linked to your own direct care.</p>
+              <p>There is also huge potential to use patient health information to improve health and social care services across the NHS. This information may include personally identifiable data that can be used to help with research and planning.</p>
+              <h2>Research</h2>
+              <p>Patient data can be used in research to improve treatment for serious illnesses and conditions. This information can also be used to find cures for diseases like diabetes and cancer. Without this data research, we are unable to develop our understanding or improve our services for the future.</p>
+              <h2>Planning</h2>
+              <p>Patient data can also be used to manage and prepare health and social care services in England. With this information the NHS can plan where to place essential services, like heart units and specialist care wards.</p>
+              <h2>Type of information we share</h2>
+              <p>Your gender, date of birth and post code are all shared along with your patient health information. If you decide to opt-out of sharing your personally identifiable data, we will not share your name or any details that can match you personally to your medical records.</p>
+              <p><a title="What we collect - NHS Digital" href="http://content.digital.nhs.uk/article/4963/What-we-collect" target="_blank">More details on the data we collect (external website)</a></p>
+
+
+          </div>
+          <div class="column--one-third">
+            <div class="callout callout--muted">
+              <h2 class="h3">Related pages</h2>
+              <ul>
+                <li><a href="/F/alts/simple-landing-page/01-overview">Your patient health information</a></li>
+                <li><a href="/F/alts/simple-landing-page/02-understanding-health-data">Understanding health data</a></li>
+                <li><a href="/F/alts/simple-landing-page/03-sharing-your-data">Sharing your data</a></li>
+                <li><a href="/F/alts/simple-landing-page/04-benefits-of-data-sharing">Benefits of data sharing</a></li>
+                <li><a href="/F/alts/simple-landing-page/05-securing-your-information">How data is kept secure</a></li>
+                <li><a href="/F/alts/simple-landing-page/06-opting-out">How opting out works</a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+
+      <hr />
+      <div class="callout callout--info">
+        <h2 class="h3">Reducing the length of stay for breast cancer surgery patients</h2>
+        <p>Sharing data has many positive effects. The length of time spent in hospital for breast cancer surgery patients dropped massively back in 2012. This was all thanks to relevant data sharing. The average length of hospital stay was reduced by 50 per cent.</p>
+        <p><a title="Breast Cancer Surgery - NHS Digital" target="_blank" href="http://content.digital.nhs.uk/casestudy/breastcancersurgery">See more on this breast cancer case study (external website)</a></p>
+      </div>
+
+  </div>
+  <div class="page-section">
+    <div class="reading-width">
+      {{ patterns.page_nav( "Your patient health information", "/F/alts/simple-landing-page/01-overview", "", "" ) }}
+    </div>
+  </div>
+</main>
+
+{% endblock %}

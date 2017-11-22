@@ -1,0 +1,126 @@
+{% block scripts %}
+<script src="/javascripts/radio-checkbox.js"></script>
+<script src="/javascripts/02-your-details.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+    <nav aria-label="Breadcrumb">
+      <ol class="list--breadcrumb">
+        <li><a href="/F/">NHS.UK</a></li>
+        <li><a href="/F/01-overview">Your patient health information</a></li>
+        <li><a href="/f/app/index">Register your preference</a></li>
+        <li>Your details</li>
+      </ol>
+    </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Your details</h1>
+      <div class="local-header__intro">
+          <div class="reading-width">
+            <p>Step 1 of 5</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              <div class="reading-width">
+                <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+                  <h2 class="h3" id="error-summary">To use this online service, please resolve the following errors</h2>
+                  <ul class="link-list" id="link-to-errors">
+                  </ul>
+                </div>
+
+                <p>You should use the same details you have given your GP.</p>
+
+                  <form class="measure" method="post" onsubmit="return !!(formValidation() &amp; matchDetails());">
+                      <div class="grid-row">
+                        <div class="column--one-half">
+                          <div class="form-group form-row" id="first-name">
+                            <label for="first-name" class="form-label error-label">First name</label>
+                            <span class="error error-message error-text" id="first-name-error">
+                              Please enter your first name
+                            </span>
+                            <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-row">
+                        <div class="column--one-half">
+                          <div class="form-group form-row" id="last-name">
+                            <label for="last-name" class="form-label error-label">Last name</label>
+                            <span class="error error-message error-text" id="last-name-error">Please enter your last name
+                            </span>
+                            <input autocomplete="off" type="text" class="form-control" id="last-name-input" name="last-name" value="">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-row">
+                        <div class="column--one-half">
+                          <div class="-date form-group form-row" id="dob">
+                              <label class="form-label error-label">Date of Birth</label>
+                              <span class="form-label__hint">For example, '01 04 1980'</span>
+                                <span class="error error-message error-text" id="dob-error">
+                                  Please enter your date of birth
+                                </span>
+                              <div>
+                                <label for="dob-day-input">Day</label>
+                                <input autocomplete="off" type="number" id="dob-day-input" name="dob-day" value="" class="day form-control" maxlength="2">
+                              </div>
+                              <div>
+                                <label for="dob-month-input">Month</label>
+                                <input autocomplete="off" type="number" id="dob-month-input" name="dob-month" value="" class="month form-control" maxlength="2">
+                              </div>
+                              <div>
+                                <label for="dob-year-input">Year</label>
+                                <input autocomplete="off" type="number" id="dob-year-input" name="dob-year" value="" class="year form-control" maxlength="4">
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-row">
+                        <div class="column--three-quarters">
+                          <div id="postcode">
+                            <div class="form-row">
+                              <label for="postcode" class="form-label error-label">Postcode</label>
+                              <span class="error error-message error-text" id="postcode-error">Please enter your postcode</span>
+                              <input autocomplete="off" type="text" id="postcode-input" name="postcode" value="" class="-small form-control">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-row">
+                        <div class="column--three-quarters" >
+                          <div id="nhs-number">
+                            <div class="form-row">
+                              <label for="nhs-number" class="form-label error-label">NHS Number</label>
+                              <span class="form-label__hint">This is a 10 digit number, like 485 777 3456</span>
+                              <span class="form-label__hint">You can find this on any letter sent to you by NHS or by logging in to a GP practice online service</span>
+                              <span class="error error-message error-text" id="nhs-number-error">Please enter your NHS number</span>
+                              <input autocomplete="off" type="number" id="nhs-number-input" name="nhs-number" value="" class="-small form-control">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <input type="submit" class="button" id="submit-details" value="Submit">
+                  </form>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+    <nav aria-label="Breadcrumb">
+      <ol class="list--breadcrumb">
+        <li><a href="/F/">NHS.UK</a></li>
+        <li><a href="/F/01-overview">Your patient health information</a></li>
+        <li>Register your preferences</li>
+      </ol>
+    </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Register your preferences for sharing patient health data</h1>
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              <p>Use this service to register your preferences for sharing your patient health information.
+                <a href="/F/01-overview">See more information about data sharing.</a>
+              </p>
+              <p>To continue you will need:</p>
+              <ul>
+                <li>access to your email or mobile phone</li>
+                <li>your NHS number</li>
+                <li>to have been an NHS patient within England</li>
+              </ul>
+
+              <details class="" role="group">
+                <summary role="button" aria-controls="details-content-0" aria-expanded="false">
+                  <span class="details__summary">Where can I find my NHS number?</span>
+                </summary>
+                <div class="details__content" id="details-content-0" aria-hidden="true">
+                  <div class="reading-width">
+                    <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+                    <ul>
+                      <li>prescriptions</li>
+                      <li>test results</li>
+                      <li>hospital referral letters</li>
+                      <li>appointment letters</li>
+                      <li>your NHS medical card</li>
+                    </ul>
+                    <p>Ask your GP for help if you can't find your NHS number</p>
+                  </div>
+                </div>
+              </details>
+
+              <p>If you have not registered your email or mobile number with an NHS service, you cannot continue with this online service. <a href="/f/app/00-other-ways-to-set-your-preferences">See other ways to set your preferences instead</a>.
+              </p>
+              <p><a role="button" class="button" title="Continue Opt-out Process" href="/f/app/01-confirm-who-you-are">Continue</a></p>
+            </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/F/">NHS.UK</a></li>
+      <li><a href="/F/01-overview">Your patient health information</a></li>
+      <li>Register your preferences</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Register your preferences for sharing patient health data</h1>
+      <div class="local-header__intro">
+        <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--one-half">
+              <ol>
+                <li><a href="/F/01-overview">Overview</a></li>
+                <li><a href="/F/02-understanding-health-data">Understanding health data</a></li>
+                <li><a href="/F/03-sharing-your-data">Sharing your data</a></li>
+                <li><a href="/F/04-benefits-of-data-sharing">Benefits of data sharing</a></li>
+              </ol>
+            </div>
+            <div class="column--one-half">
+              <ol start="5">
+                <li><a href="/F/05-securing-your-information">How data is kept secure</a></li>
+                <li><a href="/F/06-opting-out">How opting out works</a></li>
+                <li>Register your preferences</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-section">
+    <div class="reading-width">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <h2>7. Register your preferences</h2>
+          <h3>Setting a decision</h3>
+          <p>You have the right to request that your personally identifiable information is not used or shared beyond your own individual care. Using this service will confirm your decision and ensure your preferences do not change.</p>
+          <p>If you opt-out of sharing your data, this will be respected by all organisations that use health and social care information. This does not include if there is a legal reason or obligation to use your information.</p>
+          <p>Your decision will not affect your own individual care in any way. You can also change your mind and set a different preference in the future, if you wish to do so.</p>
+          <a role="button" class="button" title="Start Opt-out Process" href="/F/app/index">Start</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-section">
+    <div class="reading-width">
+    {{ patterns.page_nav( "How opting out works", "/F/06-opting-out", "", "" ) }}
+    </div>
+  </div>
+</main>
+
+{% endblock %}

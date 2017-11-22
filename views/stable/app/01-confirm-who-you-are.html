@@ -1,0 +1,69 @@
+{% block scripts %}
+<script src="/javascripts/radio-checkbox.js"></script>
+<script src="/javascripts/01-confirm-who-you-are.js"></script>
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+  <nav aria-label="Breadcrumb">
+    <ol class="list--breadcrumb">
+      <li><a href="/F/">NHS.UK</a></li>
+      <li><a href="/F/01-overview">Your patient health information</a></li>
+      <li><a href="/f/app/index">Register your preference</a></li>
+      <li>Confirm who you are</li>
+    </ol>
+  </nav>
+
+    <div class="local-header">
+      <h1 id="confirm-who-you-are" class="local-header__title">Confirm who you are</h1>
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              <div class="reading-width">
+                 <p>For security reasons we must check who you are. We will do this by sending you a text message or email with a unique security code. Don’t worry, you do not have to give us your contact details here. </p>
+                 <p>If you have registered your mobile or email with an NHS GP practice, clinic or hospital we will be able to find the details by matching your name, postcode, date of birth and NHS number.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="page-section">
+    <div class="reading-width">
+      <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+        <h2 id="error-summary" class="h3">Sorry, to continue you must fix the following errors</h2>
+        <ul class="link-list">
+          <li>
+            <a class="error-text" href="#incomplete-checkbox">Incomplete checkbox</a>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="h3">You must agree to the following statement by ticking the box</h2>
+      <form id="form" action="/F/app/02-your-details">
+        <div class="form-row ">
+          <div class="callout callout--warning">
+            <div id="incomplete-checkbox" class="error error-message">
+              <p class="error-text error-label error-label-checkbox">Please click the checkbox to allow us to verify your identity</p>
+              <br />
+            </div>
+            <input type="checkbox" id="pds-confirm" class="multiple-choice--checkbox blue-checkbox" id="1">
+            <label for="pds-confirm" class="" id="1">
+              I allow the NHS to use my email address or mobile phone number to check who I am
+            </label>
+          </div>
+        </div>
+        <input class="button" type="submit" value="Continue">
+      </form>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

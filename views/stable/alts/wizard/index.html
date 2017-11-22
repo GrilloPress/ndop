@@ -1,0 +1,46 @@
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block body %}
+<main id="content" role="main">
+  <div class="page-section">
+
+    <nav aria-label="Breadcrumb">
+      <ol class="list--breadcrumb">
+        <li><a href="#">NHS.UK</a></li>
+        <li><a href="/F/01-overview">Your patient health information</a></li>
+        <li>Register your preferences</li>
+      </ol>
+    </nav>
+
+    <div class="local-header">
+      <h1 class="local-header__title">Register your preferences for sharing patient health information</h1>
+    </div>
+  </div>
+
+  <div class="page-section">
+      <div class="reading-width">
+          <div class="grid-row">
+            <div class="column--three-quarters">
+              <p>
+                This service will take you through the process of setting your data preferences online.
+              </p>
+              <p>To continue you will need:</p>
+              <ul>
+                <li>access to your email or mobile phone</li>
+                <li>your NHS number</li>
+                <li>have been an NHS patient within England</li>
+              </ul>
+
+              <p>If you have not registered your email or mobile number with an NHS service, you cannot continue with this online service.
+                <a href="#">See other ways to set your preferences instead.</a>
+              </p>
+              <p><a role="button" class="button" title="Continue Opt-out Process" href="/f/wizard/">Continue</a></p>
+            </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}
