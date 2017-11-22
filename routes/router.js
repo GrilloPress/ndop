@@ -38,6 +38,33 @@ router.get('/F/:subdir/:subdir2/:view', function(req, res, next) {
 });
 // // // // // // //
 
+// GET v1 index page.
+router.get('/stable', function(req, res, next) {
+  res.render( 'stable/index' );
+});
+
+// GET all v1 URL reqs and push them to a template in the v1 file
+// This feels really brittle and hacky...
+// No handling of no view found...
+router.get('/stable/:view', function(req, res, next) {
+  var theView = req.params.view;
+  res.render( 'stable/' + theView );
+});
+
+router.get('/stable/:subdir/:view', function(req, res, next) {
+  var theView = req.params.view;
+  var theDir = req.params.subdir;
+  res.render( 'stable/' + theDir + '/' + theView );
+});
+
+router.get('/stable/:subdir/:subdir2/:view', function(req, res, next) {
+  var theView = req.params.view;
+  var theDir = req.params.subdir;
+  var theDir2 = req.params.subdir2;
+  res.render( 'stable/' + theDir + '/' + theDir2 + '/' + theView );
+});
+// // // // // // //
+
 // GET BIT index page.
 router.get('/bit', function(req, res, next) {
   res.render( 'bit/index' );
